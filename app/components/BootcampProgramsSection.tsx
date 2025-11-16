@@ -227,11 +227,11 @@ export default function BootcampProgramsSection() {
             <h2 className="whitespace-nowrap font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               Bootcamps
             </h2>
-            <p className="mt-3 max-w-xl text-sm text-slate-300">
-              Every bootcamp runs on the DOGM.AI Journey &mdash; concise,
-              outcome-driven programs with weekly milestones, shipped work, and
-              SEO-friendly case studies for Digital Professionals.
-            </p>
+<p className="mt-3 max-w-xl text-sm text-slate-300">
+  Every bootcamp runs on the DOGM.AI Journey &mdash; concise,
+  outcome-driven programs with weekly milestones, shipped work, and
+  case studies across four tracks: Builder, Designer, Analyst, and Execution.
+</p>
           </div>
           <div className="flex flex-wrap gap-3 text-[11px] text-slate-400">
             {[
