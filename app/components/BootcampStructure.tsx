@@ -38,7 +38,7 @@ const tiers: Tier[] = [
       "Upload to your project portfolio",
       "Progress dashboard & growth indicators",
     ],
-    footer: "You don&apos;t just learn - you produce.",
+    footer: "You don't just learn - you produce.",
   },
   {
     label: "Monthly Structure",
