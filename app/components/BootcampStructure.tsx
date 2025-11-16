@@ -1,6 +1,7 @@
 type Tier = {
   label: string;
   labelClass: string;
+  dotClass: string;
   title: string;
   body: string;
   bullets: string[];
@@ -10,43 +11,46 @@ const tiers: Tier[] = [
   {
     label: "Daily Structure",
     labelClass: "text-intl-orange",
+    dotClass: "bg-intl-orange",
     title: "Daily Learning Sprints",
     body:
       "Daily sprints mix focused reps, AI prompts, and shippable micro-deliverables so Digital Professionals build unstoppable momentum.",
     bullets: [
-      "&bull; 30&ndash;45 min sprint work",
-      "&bull; AI-guided planning & task breakdowns",
-      "&bull; Daily micro-deliverables",
-      "&bull; Optional mentor check-ins",
-      "&bull; Reflection prompts for improvement",
+      "30-45 minute sprint work",
+      "AI-guided planning & task breakdowns",
+      "Daily micro-deliverables",
+      "Optional mentor check-ins",
+      "Reflection prompts for improvement",
     ],
   },
   {
     label: "Weekly Structure",
     labelClass: "text-cerulean",
+    dotClass: "bg-cerulean",
     title: "Weekly Outcome Cycles",
     body:
       "Each week culminates in a portfolio artifact critiqued by AI and mentors so every Digital Professional revision has a purpose.",
     bullets: [
-      "&bull; Weekly milestone project",
-      "&bull; AI-supported research & prototyping",
-      "&bull; Mentor feedback + revision cycle",
-      "&bull; Upload to your project portfolio",
-      "&bull; Progress dashboard & growth indicators",
+      "Weekly milestone project",
+      "AI-supported research & prototyping",
+      "Mentor feedback + revision cycle",
+      "Upload to your project portfolio",
+      "Progress dashboard & growth indicators",
     ],
   },
   {
     label: "Monthly Structure",
     labelClass: "text-allports",
+    dotClass: "bg-allports",
     title: "Monthly Mastery Milestones",
     body:
       "Monthly checkpoints benchmark your move from explorer &rarr; practitioner &rarr; AI-native digital leader.",
     bullets: [
-      "&bull; Full project evaluation",
-      "&bull; AI-assisted mastery assessment",
-      "&bull; Skill gaps & personalized next steps",
-      "&bull; Optional advanced challenges",
-      "&bull; Monthly mastery badge & portfolio update",
+      "Full project evaluation",
+      "AI-assisted mastery assessment",
+      "Skill gaps & personalized next steps",
+      "Optional advanced challenges",
+      "Monthly mastery badge & portfolio update",
     ],
   },
 ];
@@ -82,13 +86,17 @@ export default function BootcampStructure() {
               <p className="mt-3 text-xs leading-relaxed text-slate-300">
                 {tier.body}
               </p>
-              <ul className="mt-5 space-y-2 text-[12px] text-slate-400">
+              <ul className="mt-5 space-y-3 text-[12px] text-slate-400">
                 {tier.bullets.map((bullet) => (
                   <li
                     key={bullet}
-                    className="text-[12px] text-slate-400"
-                    dangerouslySetInnerHTML={{ __html: bullet }}
-                  />
+                    className="flex items-start gap-3 text-[12px] text-slate-300"
+                  >
+                    <span className="mt-[2px] flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-black/40">
+                      <span className={`h-2 w-2 rounded-full ${tier.dotClass}`} />
+                    </span>
+                    <span className="text-slate-300">{bullet}</span>
+                  </li>
                 ))}
               </ul>
             </div>

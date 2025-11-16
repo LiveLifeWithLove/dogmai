@@ -64,8 +64,7 @@ export default function CoreSystemSection() {
               Under the hood, AI sets the pace &mdash; planning, reviewing, and
               surfacing the next constraint &mdash; while you do the reps. It
               keeps you honest, accelerates critique, and lines up the next
-              challenge so practice stays intentional and SEO-friendly
-              portfolios stay fresh.
+              challenge so practice stays intentional and portfolios stay fresh.
             </p>
 
             <div className="mt-6 grid gap-3 text-xs text-slate-300 sm:grid-cols-3">
