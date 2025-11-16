@@ -1,7 +1,21 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
-    <section className="border-b border-white/5 bg-gradient-to-b from-ebony via-ebony to-ebony/90">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-16 md:flex-row md:items-center md:pb-24 md:pt-20">
+    <section className="relative overflow-hidden border-b border-white/5 bg-ebony">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="relative h-full w-full">
+          <Image
+            src="/hero-image.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center opacity-70"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ebony/50 via-ebony/70 to-ebony/90" />
+        </div>
+      </div>
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-16 md:flex-row md:items-center md:pb-24 md:pt-20">
         <div className="flex-1 space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-intl-orange/30 bg-intl-orange/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-intl-orange">
             <span className="h-1.5 w-1.5 rounded-full bg-intl-orange" />
