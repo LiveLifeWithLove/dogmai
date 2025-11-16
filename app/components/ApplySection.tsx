@@ -1,6 +1,8 @@
+import AnimatedSection from "./AnimatedSection";
+
 export default function ApplySection() {
   return (
-    <section id="apply" className="bg-ebony py-16">
+    <AnimatedSection id="apply" className="bg-ebony py-16">
       <div className="mx-auto max-w-3xl px-4 text-center">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
           You Don&apos;t Need AI Experience. You Need Discipline.
@@ -18,6 +20,6 @@ export default function ApplySection() {
           <span className="text-lg">&rarr;</span>
         </button>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from "react";
+import AnimatedSection from "./AnimatedSection";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,7 +13,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section
+    <AnimatedSection
       id="contact"
       className="border-t border-white/10 bg-gradient-to-b from-ebony via-black/80 to-ebony/90 py-16"
     >
@@ -102,6 +103,6 @@ export default function ContactSection() {
           </a>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

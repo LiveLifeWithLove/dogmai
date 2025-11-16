@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const highlights = [
   {
     label: "Timeframe",
@@ -46,7 +48,7 @@ const loopFlow = [
 
 export default function CoreSystemSection() {
   return (
-    <section id="system" className="border-b border-white/5 bg-black/80 py-16">
+    <AnimatedSection id="system" className="border-b border-white/5 bg-black/80 py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
@@ -130,6 +132,6 @@ export default function CoreSystemSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

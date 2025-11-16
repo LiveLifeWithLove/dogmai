@@ -1,8 +1,16 @@
 import Image from "next/image";
+import AnimatedSection from "./AnimatedSection";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden border-b border-white/5 bg-ebony">
+    <AnimatedSection
+      trigger="mount"
+      variantsOverride={{
+        hidden: { opacity: 0, y: 0 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      className="relative overflow-hidden border-b border-white/5 bg-ebony"
+    >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="relative h-full w-full">
           <Image
@@ -65,6 +73,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

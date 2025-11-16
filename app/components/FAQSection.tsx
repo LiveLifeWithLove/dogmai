@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const faqs = [
   {
     question: "Who is DOGM.AI for?",
@@ -27,7 +29,7 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="border-t border-white/10 bg-ebony/95 py-16">
+    <AnimatedSection id="faq" className="border-t border-white/10 bg-ebony/95 py-16">
       <div className="mx-auto max-w-3xl px-4">
         <h2 className="mb-6 text-center font-heading text-2xl font-extrabold text-white sm:text-3xl">
           Frequently Asked Questions
@@ -46,6 +48,6 @@ export default function FAQSection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

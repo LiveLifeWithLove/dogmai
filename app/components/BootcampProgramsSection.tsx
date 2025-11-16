@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 type CurriculumItem = {
   title: string;
   detail: string;
@@ -229,7 +231,7 @@ const programs: BootcampProgram[] = [
 
 export default function BootcampProgramsSection() {
   return (
-    <section
+    <AnimatedSection
       id="bootcamp"
       className="border-b border-white/5 bg-ebony/90 py-16"
     >
@@ -345,6 +347,6 @@ export default function BootcampProgramsSection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 type Transformation = {
   number: string;
   title: string;
@@ -32,7 +34,7 @@ const transformations: Transformation[] = [
 
 export default function MasterySummarySection() {
   return (
-    <section id="summary" className="border-b border-white/5 bg-ebony py-16">
+    <AnimatedSection id="summary" className="border-b border-white/5 bg-ebony py-16">
       <div className="mx-auto max-w-5xl px-4">
         <div className="flex flex-col gap-3 pb-10 text-center md:text-left">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
@@ -63,6 +65,6 @@ export default function MasterySummarySection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

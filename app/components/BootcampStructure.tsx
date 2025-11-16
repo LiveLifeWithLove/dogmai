@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 type Tier = {
   label: string;
   labelClass: string;
@@ -59,7 +61,7 @@ const tiers: Tier[] = [
 
 export default function BootcampStructure() {
   return (
-    <section className="border-b border-white/5 bg-black/60 py-20">
+    <AnimatedSection className="border-b border-white/5 bg-black/60 py-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="mb-12 text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
@@ -118,6 +120,6 @@ export default function BootcampStructure() {
           </p>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const stats = [
   { value: "80%+", label: "Ship their capstone", color: "text-intl-orange" },
   { value: "10-20h", label: "Weekly AI work", color: "text-cerulean" },
@@ -54,7 +56,7 @@ const outcomeTracks = [
 
 export default function OutcomesSection() {
   return (
-    <section
+    <AnimatedSection
       id="outcomes"
       className="border-b border-white/5 bg-black/90 py-16"
     >
@@ -176,6 +178,6 @@ export default function OutcomesSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const accelerators = [
   {
     label: "Remove Drag",
@@ -24,7 +26,7 @@ const accelerators = [
 
 export default function AccelerationSection() {
   return (
-    <section
+    <AnimatedSection
       id="acceleration"
       className="border-b border-white/5 bg-black/85 py-16"
     >
@@ -73,6 +75,6 @@ export default function AccelerationSection() {
           </p>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

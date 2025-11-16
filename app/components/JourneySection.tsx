@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const tags = [
   "Project-based",
   "AI-assisted",
@@ -151,7 +153,7 @@ function JourneyCardView({ card }: { card: JourneyCard }) {
 
 export default function JourneySection() {
   return (
-    <section id="journey" className="border-b border-white/5 bg-ebony/80 py-16">
+    <AnimatedSection id="journey" className="border-b border-white/5 bg-ebony/80 py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-start justify-between gap-6 pb-10 md:flex-row md:items-end">
           <div>
@@ -195,6 +197,6 @@ export default function JourneySection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
