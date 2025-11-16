@@ -120,33 +120,36 @@ const journeyCards: JourneyCard[] = [
 
 function JourneyCardView({ card }: { card: JourneyCard }) {
   return (
-    <article className="group flex flex-col gap-4 rounded-3xl border border-slate-800 bg-gradient-to-b from-black/40 to-black/80 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.85)]">
-      <div className="flex items-center justify-between text-xs text-slate-400">
-        <span className="inline-flex items-center gap-2">
-          <span className={`h-1.5 w-1.5 rounded-full ${card.dotClass}`} />
-          {card.id}
-        </span>
-        <span
-          className={`rounded-full px-2 py-0.5 text-[10px] ${card.badgeClass}`}
-        >
-          {card.badge}
-        </span>
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 p-5 shadow-[0_18px_35px_rgba(0,0,0,0.65)]">
+      <div className="absolute inset-px rounded-[22px] border border-white/5 opacity-40 transition duration-300 group-hover:opacity-70" />
+      <div className="relative z-10 flex flex-1 flex-col gap-4">
+        <div className="flex items-center justify-between text-xs text-slate-400">
+          <span className="inline-flex items-center gap-2">
+            <span className={`h-1.5 w-1.5 rounded-full ${card.dotClass}`} />
+            {card.id}
+          </span>
+          <span
+            className={`rounded-full px-2 py-0.5 text-[10px] ${card.badgeClass}`}
+          >
+            {card.badge}
+          </span>
+        </div>
+        <h3 className="text-sm font-semibold text-white">{card.title}</h3>
+        <p className="text-xs text-slate-300">{card.description}</p>
+        <ul className="mt-2 space-y-2 text-xs text-slate-400">
+          {card.bullets.map((bullet) => (
+            <li key={bullet} className="flex items-center gap-3 text-[11px]">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/40">
+                <span className={`h-2.5 w-2.5 rounded-full ${card.bulletDotClass}`} />
+              </span>
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-auto text-[11px] font-medium text-slate-400">
+          {card.subtitle}
+        </p>
       </div>
-      <h3 className="text-sm font-semibold text-white">{card.title}</h3>
-      <p className="text-xs text-slate-300">{card.description}</p>
-      <ul className="mt-2 space-y-2 text-xs text-slate-400">
-        {card.bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center gap-3 text-[11px]">
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/50">
-              <span className={`h-2.5 w-2.5 rounded-full ${card.bulletDotClass}`} />
-            </span>
-            <span>{bullet}</span>
-          </li>
-        ))}
-      </ul>
-      <p className="mt-3 text-[11px] font-medium text-slate-400">
-        {card.subtitle}
-      </p>
     </article>
   );
 }
@@ -186,12 +189,12 @@ export default function JourneySection() {
           </div>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid auto-rows-fr gap-5 md:grid-cols-3">
           {journeyCards.slice(0, 3).map((card) => (
             <JourneyCardView key={card.id} card={card} />
           ))}
         </div>
-        <div className="mt-6 grid gap-5 md:grid-cols-3">
+        <div className="mt-6 grid auto-rows-fr gap-5 md:grid-cols-3">
           {journeyCards.slice(3).map((card) => (
             <JourneyCardView key={card.id} card={card} />
           ))}

@@ -17,6 +17,7 @@ type BootcampProgram = {
   buttonText: string;
   buttonClass: string;
   tags: string[];
+  borderGradient: string;
   curriculumLabel: string;
   curriculum: CurriculumItem[];
   stackLabel: string;
@@ -38,6 +39,7 @@ const programs: BootcampProgram[] = [
     buttonText: "See Curriculum",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
+    borderGradient: "from-intl-orange/70 via-intl-orange/40 to-cerulean/60",
     tags: [
       "Ship full-stack products",
       "AI pair programming",
@@ -90,6 +92,7 @@ const programs: BootcampProgram[] = [
     buttonText: "View Curriculum",
     buttonClass:
       "bg-gradient-to-r from-cerulean to-allports text-ebony",
+    borderGradient: "from-cerulean/70 via-cerulean/40 to-allports/60",
     tags: [
       "Design systems mastery",
       "AI concept sprints",
@@ -141,6 +144,7 @@ const programs: BootcampProgram[] = [
     buttonText: "Check Curriculum",
     buttonClass:
       "bg-gradient-to-r from-allports to-cerulean text-ebony",
+    borderGradient: "from-allports/70 via-cerulean/40 to-allports/60",
     tags: [
       "Python-first workflows",
       "AI-assisted analysis",
@@ -189,6 +193,7 @@ const programs: BootcampProgram[] = [
     buttonText: "Review Curriculum",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
+    borderGradient: "from-intl-orange/70 via-cerulean/40 to-intl-orange/60",
     tags: [
       "Automation architect",
       "AI productivity ops",
@@ -271,78 +276,85 @@ export default function BootcampProgramsSection() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {programs.map((program) => (
-            <article
-              key={program.id}
-              className="flex flex-col rounded-3xl border border-slate-800 bg-gradient-to-b from-black/40 to-black/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.85)]"
-            >
-              <div className="mb-3 flex items-center justify-between text-[11px] text-slate-400">
-                <span className="inline-flex items-center gap-2">
-                  <span
-                    className={`h-1.5 w-1.5 rounded-full ${program.dotClass}`}
-                  />
-                  {program.intro}
-                </span>
-                <span
-                  className={`rounded-full px-2 py-0.5 text-[10px] ${program.badgeClass}`}
-                >
-                  {program.badge}
-                </span>
+            <article key={program.id} className="group relative rounded-3xl">
+              <div className="pointer-events-none absolute inset-0 rounded-3xl">
+                <div
+                  className={`absolute inset-0 rounded-3xl border border-white/5 opacity-60`}
+                />
+                <div
+                  className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${program.borderGradient} opacity-60 blur-sm transition duration-300 group-hover:opacity-90 group-hover:blur`}
+                />
               </div>
-              <h3 className="text-sm font-semibold text-white">
-                {program.title}
-              </h3>
-              <div className="mt-2 mb-2 flex flex-wrap gap-2 text-[11px] text-slate-400">
-                <span className="rounded-full border border-white/10 px-2 py-0.5">
-                  {program.duration}
-                </span>
-                {program.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-slate-800 px-2.5 py-0.5"
-                  >
-                    {tag}
+              <div className="relative flex flex-col rounded-3xl border border-slate-800 bg-gradient-to-b from-black/40 to-black/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.85)]">
+                <div className="mb-3 flex items-center justify-between text-[11px] text-slate-400">
+                  <span className="inline-flex items-center gap-2">
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full ${program.dotClass}`}
+                    />
+                    {program.intro}
                   </span>
-                ))}
-              </div>
-              <p
-                className="mt-2 text-xs text-slate-300"
-                dangerouslySetInnerHTML={{ __html: program.description }}
-              />
-              <button
-                className={`mt-4 rounded-full px-5 py-2 text-xs font-bold shadow-lg transition-all duration-200 hover:scale-105 ${program.buttonClass}`}
-              >
-                {program.buttonText}
-              </button>
-
-              <div className="mt-4 border-t border-slate-800/80 pt-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-                  {program.curriculumLabel}
-                </p>
-                <ul className="mt-2 space-y-1.5 text-[11px] text-slate-400">
-                  {program.curriculum.map((item) => (
-                    <li key={item.title}>
-                      {item.title}
-                      <br />
-                      <span className="text-slate-500">{item.detail}</span>
-                    </li>
+                  <span
+                    className={`rounded-full px-2 py-0.5 text-[10px] ${program.badgeClass}`}
+                  >
+                    {program.badge}
+                  </span>
+                </div>
+                <h3 className="text-sm font-semibold text-white">
+                  {program.title}
+                </h3>
+                <div className="mt-2 mb-2 flex flex-wrap gap-2 text-[11px] text-slate-400">
+                  <span className="rounded-full border border-white/10 px-2 py-0.5">
+                    {program.duration}
+                  </span>
+                  {program.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-slate-800/70 bg-black/30 px-2.5 py-0.5"
+                    >
+                      {tag}
+                    </span>
                   ))}
-                </ul>
-              </div>
+                </div>
+                <p
+                  className="mt-2 text-xs text-slate-300"
+                  dangerouslySetInnerHTML={{ __html: program.description }}
+                />
+                <button
+                  className={`mt-4 rounded-full px-5 py-2 text-xs font-bold shadow-lg transition-all duration-200 hover:scale-105 ${program.buttonClass}`}
+                >
+                  {program.buttonText}
+                </button>
 
-              <div className="mt-4 border-t border-slate-800/80 pt-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">
-                  {program.stackLabel}
+                <div className="mt-4 border-t border-slate-800/80 pt-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                    {program.curriculumLabel}
+                  </p>
+                  <ul className="mt-2 space-y-1.5 text-[11px] text-slate-400">
+                    {program.curriculum.map((item) => (
+                      <li key={item.title}>
+                        {item.title}
+                        <br />
+                        <span className="text-slate-500">{item.detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-4 border-t border-slate-800/80 pt-3">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">
+                    {program.stackLabel}
+                  </p>
+                  <ul className="mt-2 space-y-1 text-xs text-slate-400">
+                    {program.stackItems.map((stack) => (
+                      <li key={stack}>{stack}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <p className="mt-4 text-[11px] text-slate-400">
+                  {program.capstone}
                 </p>
-                <ul className="mt-2 space-y-1 text-xs text-slate-400">
-                  {program.stackItems.map((stack) => (
-                    <li key={stack}>{stack}</li>
-                  ))}
-                </ul>
               </div>
-
-              <p className="mt-4 text-[11px] text-slate-400">
-                {program.capstone}
-              </p>
             </article>
           ))}
         </div>
