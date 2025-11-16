@@ -28,7 +28,7 @@ const transformations: Transformation[] = [
     number: "4",
     title: "AI-native mastery",
     description:
-      "You don&apos;t just use AI. You work with it - to automate, analyze, design, build, and deliver at modern speed.",
+      "You don't just use AI. You work with it - to automate, analyze, design, build, and deliver at modern speed.",
   },
 ];
 
