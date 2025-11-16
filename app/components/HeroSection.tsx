@@ -22,9 +22,10 @@ export default function HeroSection() {
           </h1>
 
           <p className="max-w-xl text-pretty text-sm text-slate-300 sm:text-base">
-            DOGM.AI is the discipline engine for ambitious builders &mdash; a
-            repeatable loop that turns structured days into proof of work,
-            compounding growth, and AI-guided insight.
+            DOGM.AI is the discipline engine built for modern digital
+            professionals and ambitious builders &mdash; a repeatable loop that
+            turns structured days into portfolio-ready proof, compounding
+            growth, and AI-guided insight.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -39,7 +40,7 @@ export default function HeroSection() {
               type="button"
               className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-5 py-2.5 text-xs font-medium text-slate-200 backdrop-blur-sm transition-all duration-200 hover:border-slate-500 hover:text-white hover:scale-105"
             >
-              Watch 90-second overview
+              Watch 90-second program walkthrough
               <span className="text-lg">&#9654;</span>
             </button>
           </div>
@@ -47,7 +48,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center gap-6 pt-4 text-xs text-slate-400">
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-cerulean" />
-              Daily accountability for builders, designers, and operators
+              Daily accountability for builders, designers, and digital professionals
             </div>
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-allports" />

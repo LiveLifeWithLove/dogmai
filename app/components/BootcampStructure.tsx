@@ -12,7 +12,7 @@ const tiers: Tier[] = [
     labelClass: "text-intl-orange",
     title: "Daily Learning Sprints",
     body:
-      "Daily sprints mix focused reps, AI prompts, and shippable micro-deliverables so momentum compounds.",
+      "Daily sprints mix focused reps, AI prompts, and shippable micro-deliverables so digital professionals build unstoppable momentum.",
     bullets: [
       "&bull; 30&ndash;45 min sprint work",
       "&bull; AI-guided planning & task breakdowns",
@@ -26,7 +26,7 @@ const tiers: Tier[] = [
     labelClass: "text-cerulean",
     title: "Weekly Outcome Cycles",
     body:
-      "Each week culminates in a portfolio artifact critiqued by AI and mentors so every revision has a purpose.",
+      "Each week culminates in a portfolio artifact critiqued by AI and mentors so every digital professional revision has a purpose.",
     bullets: [
       "&bull; Weekly milestone project",
       "&bull; AI-supported research & prototyping",
@@ -40,7 +40,7 @@ const tiers: Tier[] = [
     labelClass: "text-allports",
     title: "Monthly Mastery Milestones",
     body:
-      "Monthly checkpoints benchmark your move from explorer &rarr; practitioner &rarr; AI-native leader.",
+      "Monthly checkpoints benchmark your move from explorer &rarr; practitioner &rarr; AI-native digital leader.",
     bullets: [
       "&bull; Full project evaluation",
       "&bull; AI-assisted mastery assessment",
@@ -61,8 +61,9 @@ export default function BootcampStructure() {
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300">
             DOGM.AI bootcamps marry disciplined structure, measurable work, and
-            AI-guided iteration. Here&apos;s how the daily, weekly, and monthly
-            cycles stack to build an AI-native professional.
+            AI-guided iteration so digital professionals can ship on demand.
+            Here&apos;s how the daily, weekly, and monthly cycles stack to build
+            an AI-native digital professional.
           </p>
         </div>
 
@@ -96,13 +97,14 @@ export default function BootcampStructure() {
 
         <div className="mx-auto mt-16 max-w-3xl text-center">
           <p className="text-sm leading-relaxed text-slate-300">
-            This layered structure keeps the DOGM.AI chain unbroken:{" "}
+            This layered structure keeps the DOGM.AI chain unbroken for digital
+            professionals:{" "}
             <span className="font-semibold text-white">
               Discipline &rarr; Outcomes &rarr; Growth &rarr; Mastery &rarr;
               Acceleration &rarr; Intelligence.
             </span>{" "}
             Each cycle compounds skill and produces measurable, portfolio-ready
-            proof.
+            proof that recruiters and clients can search, verify, and trust.
           </p>
         </div>
       </div>
