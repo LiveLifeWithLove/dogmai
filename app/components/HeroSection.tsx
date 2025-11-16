@@ -5,25 +5,23 @@ export default function HeroSection() {
         <div className="flex-1 space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-intl-orange/30 bg-intl-orange/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-intl-orange">
             <span className="h-1.5 w-1.5 rounded-full bg-intl-orange" />
-            DOGM.AI Core System | v2026
+            DOGM.AI Core System
           </div>
 
           <h1
             className="font-heading text-5xl font-extrabold leading-tight tracking-tight text-white md:text-6xl"
-            style={{ whiteSpace: "nowrap" }}
           >
             Accelerate Mastery.{" "}
             <span
               className="bg-gradient-to-r from-intl-orange via-cerulean to-allports bg-clip-text text-transparent"
-              style={{ whiteSpace: "nowrap" }}
             >
               Learn with AI.
             </span>
           </h1>
 
           <p className="max-w-xl text-pretty text-sm text-slate-300 sm:text-base">
-            DOGM.AI is the discipline engine built for modern digital
-            professionals and ambitious builders &mdash; a repeatable loop that
+            DOGM.AI is the discipline engine built for modern Digital
+            Professionals and ambitious builders &mdash; a repeatable loop that
             turns structured days into portfolio-ready proof, compounding
             growth, and AI-guided insight.
           </p>
@@ -33,7 +31,7 @@ export default function HeroSection() {
               href="#loop"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold text-ebony shadow-[0_0_40px_rgba(250,84,4,0.6)] transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-orange-500"
             >
-              Explore the DOGM.AI Loop
+              Explore the DOGM.AI System
               <span className="text-lg">&rarr;</span>
             </a>
             <button
@@ -48,7 +46,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center gap-6 pt-4 text-xs text-slate-400">
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-cerulean" />
-              Daily accountability for builders, designers, and digital professionals
+              Daily accountability for builders, designers, and Digital Professionals
             </div>
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-allports" />

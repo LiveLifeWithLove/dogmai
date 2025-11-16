@@ -16,7 +16,7 @@ const steps: MasteryStep[] = [
     borderClass: "border-intl-orange/50",
     circleBgClass: "bg-intl-orange/20",
     description:
-      "Build structure, habits, and consistency with daily sprints and guided tasks.",
+      "Build structure, habits, and consistency with daily sprints and guided tasks built for Digital Professionals.",
     tag: "AI guidance systems",
   },
   {
@@ -26,7 +26,7 @@ const steps: MasteryStep[] = [
     borderClass: "border-cerulean/50",
     circleBgClass: "bg-cerulean/20",
     description:
-      "Ship real projects and deliverables every week. Turn learning into progress.",
+      "Ship real projects and deliverables every week so hiring managers can see how you work.",
     tag: "AI project support",
   },
   {
@@ -36,7 +36,7 @@ const steps: MasteryStep[] = [
     borderClass: "border-allports/50",
     circleBgClass: "bg-allports/20",
     description:
-      "Accelerate with continuous feedback, iteration, and mentor/AI guidance.",
+      "Accelerate with continuous feedback, iteration, and mentor/AI guidance tailored to Digital Professional workflows.",
     tag: "AI analytics & mentoring",
   },
   {
@@ -46,7 +46,7 @@ const steps: MasteryStep[] = [
     borderClass: "border-intl-orange/50",
     circleBgClass: "bg-intl-orange/20",
     description:
-      "Deepen understanding through advanced challenges, simulation, and leadership.",
+      "Deepen understanding through advanced challenges, simulation, and leadership so you can architect digital work systems.",
     tag: "Simulation & challenge systems",
   },
   {
@@ -56,7 +56,7 @@ const steps: MasteryStep[] = [
     borderClass: "border-cerulean/50",
     circleBgClass: "bg-cerulean/20",
     description:
-      "Multiply your impact with workflow automation and rapid prototyping.",
+      "Multiply your impact with workflow automation and rapid prototyping that showcase AI-native Digital Professional leverage.",
     tag: "Workflow automation",
   },
   {
@@ -66,7 +66,7 @@ const steps: MasteryStep[] = [
     borderClass: "border-allports/50",
     circleBgClass: "bg-allports/20",
     description:
-      "Fuse human creativity with AI to become an adaptive, innovative creator.",
+      "Fuse human creativity with AI to become an adaptive, innovative Digital Professional.",
     tag: "Human + AI co-creation",
   },
 ];
@@ -134,11 +134,12 @@ export default function MasterySummarySection() {
         <div className="flex flex-col gap-4 pb-8 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-center font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-left">
-              The Mastery Journey
+              The Path to Mastery
             </h2>
             <p className="mt-3 max-w-xl text-center text-base text-slate-300 md:text-left">
-              A straight path from discipline to creative mastery, powered by AI
-              and real work. Every stage is a milestone you can show.
+              A straight path from discipline to creative mastery for Digital
+              Professionals, powered by AI and real work. Every stage is a
+              milestone you can show and optimize for search.
             </p>
           </div>
         </div>

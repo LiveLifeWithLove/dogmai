@@ -1,7 +1,7 @@
 const stats = [
   { value: "80%+", label: "Ship capstone projects", color: "text-intl-orange" },
-  { value: "10\u201320h", label: "Weekly AI work", color: "text-cerulean" },
-  { value: "3–5", label: "Portfolio artifacts", color: "text-allports" },
+  { value: "10-20h", label: "Weekly AI work", color: "text-cerulean" },
+  { value: "3-5", label: "Portfolio artifacts", color: "text-allports" },
 ];
 
 const leaveWithItems = [
@@ -9,7 +9,7 @@ const leaveWithItems = [
     color: "bg-intl-orange",
     title: "A concrete portfolio:",
     description:
-      "apps, case studies, dashboards, or workflows that prove the reps happened.",
+      "apps, case studies, dashboards, or workflows that prove the reps happened and strengthen Digital Professional SEO.",
   },
   {
     color: "bg-cerulean",
@@ -21,7 +21,7 @@ const leaveWithItems = [
     color: "bg-allports",
     title: "A compelling narrative:",
     description:
-      "a narrative rooted in proof of work, not theoretical credentials.",
+      "a narrative rooted in proof of work, not theoretical credentials, so Digital Professionals stand out in search and interviews.",
   },
   {
     color: "bg-intl-orange",
@@ -36,14 +36,14 @@ const outcomeTracks = [
     number: "1",
     title: "Career & role shifts",
     description:
-      "Shift into product, design, development, data, or ops with artifacts that show exactly how you work.",
+      "Shift into product, design, development, data, or Digital Professional leadership with artifacts that show exactly how you work.",
     color: "bg-intl-orange/15 text-intl-orange",
   },
   {
     number: "2",
     title: "Stronger in-role performance",
     description:
-      "Become the AI-native operator on your team &mdash; faster, clearer, more reliable.",
+      "Become the AI-native Digital Professional on your team &mdash; faster, clearer, more reliable.",
     color: "bg-cerulean/15 text-cerulean",
   },
   {
@@ -68,8 +68,9 @@ export default function OutcomesSection() {
               Outcomes &amp; Transformations
             </h2>
             <p className="mt-3 max-w-xl text-sm text-slate-300">
-              DOGM.AI is built on evidence, not theory. You leave with shipped
-              work, upgraded workflows, and a story you can defend.
+              DOGM.AI is built on evidence, not theory. Digital Professionals
+              leave with shipped work, upgraded workflows, and a story they can
+              defend in search results, sales calls, and interviews.
             </p>
           </div>
           <div className="w-full max-w-sm md:text-right">
@@ -170,8 +171,8 @@ export default function OutcomesSection() {
               </span>
               <p className="mt-2">
                 DOGM.AI isn&apos;t about &ldquo;learning AI tools.&rdquo; It&apos;s
-                about becoming the professional who can learn, build, and adapt
-                on demand.
+                about becoming the Digital Professional who can learn, build,
+                and adapt on demand.
               </p>
             </div>
           </div>

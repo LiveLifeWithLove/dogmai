@@ -21,8 +21,8 @@ export default function ContactSection() {
           Contact Us
         </h2>
         <p className="mb-8 text-sm text-slate-300">
-          Questions, partnership ideas, or want to work with DOGM.AI? Reach out
-          below.
+          Questions, partnership ideas, or want to equip your Digital
+          Professionals with DOGM.AI? Reach out below.
         </p>
         <form
           id="contactForm"

@@ -4,21 +4,21 @@ const accelerators = [
     dotClass: "bg-intl-orange",
     title: "No More Getting Stuck",
     description:
-      "The AI Co-Pilot clears blockers instantly &mdash; debugging, rewriting, testing, analyzing, or clarifying requirements &mdash; so you stay in creation mode.",
+      "The AI Co-Pilot clears blockers instantly &mdash; debugging, rewriting, testing, analyzing, or clarifying requirements &mdash; so Digital Professionals stay in creation mode.",
   },
   {
     label: "Shorten Feedback Loops",
     dotClass: "bg-cerulean",
-    title: "Improve 5× Faster",
+    title: "Improve 5X Faster",
     description:
-      "Feedback arrives on demand: structural critiques, strategy notes, and clarity fixes delivered the moment you ask. Shorter loops mean faster mastery.",
+      "Feedback arrives on demand: structural critiques, strategy notes, and clarity fixes delivered the moment you ask. Shorter loops mean faster mastery for every Digital Professional.",
   },
   {
     label: "Boost Leverage",
     dotClass: "bg-allports",
     title: "Do More With the Same Hours",
     description:
-      "Research, drafts, prototypes, and analysis accelerate so you can spend your hours on judgment, iteration, and impact.",
+      "Research, drafts, prototypes, and analysis accelerate so you can spend your hours on judgment, iteration, and impact that clients can search and trust.",
   },
 ];
 
@@ -31,13 +31,14 @@ export default function AccelerationSection() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            How the AI Co-Pilot Accelerates You
+            How the AI Co-Pilot Accelerates Digital Professionals
           </h2>
           <p className="mt-3 text-sm text-slate-300">
             Acceleration isn&apos;t about working faster&mdash;it&apos;s about
             removing drag, focusing attention, and shrinking the gap between
-            idea and output. The AI Co-Pilot keeps you learning, building, and
-            iterating at a pace that used to take months.
+            idea and output so Digital Professionals lead every sprint. The AI
+            Co-Pilot keeps you learning, building, and iterating at a pace that
+            used to take months.
           </p>
         </div>
 
@@ -65,8 +66,8 @@ export default function AccelerationSection() {
         <div className="mx-auto mt-14 max-w-3xl text-center">
           <p className="text-sm text-slate-300 leading-relaxed">
             AI doesn&apos;t replace the work&mdash;it amplifies your ability to
-            do the work that matters. Remove friction, collapse feedback loops,
-            and leverage compounds.
+            do the work that matters as a Digital Professional. Remove friction,
+            collapse feedback loops, and let leverage compound.
           </p>
         </div>
       </div>

@@ -1,4 +1,9 @@
-const tags = ["Project-based", "AI-assisted", "Mentor-guided"];
+const tags = [
+  "Project-based",
+  "AI-assisted",
+  "Mentor-guided",
+  "Digital Professional Ready",
+];
 
 type JourneyCard = {
   id: string;
@@ -13,14 +18,14 @@ type JourneyCard = {
 
 const journeyCards: JourneyCard[] = [
   {
-    id: "01 · Discipline",
+    id: "01 | Discipline",
     dotClass: "bg-intl-orange",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     badge: "Structure",
     title: "The Foundation",
     subtitle: "Craft the habit, then trust the habit.",
     description:
-      "Structure beats hype. Daily sprints, AI prompts, and reflection rituals build the muscle to deliver even when motivation dips.",
+      "Structure beats hype. Daily sprints, AI prompts, and reflection rituals build the muscle Digital Professionals rely on to deliver even when motivation dips.",
     bullets: [
       "&bull; Daily learning sprints",
       "&bull; Guided task systems & accountability",
@@ -28,14 +33,14 @@ const journeyCards: JourneyCard[] = [
     ],
   },
   {
-    id: "02 · Outcomes",
+    id: "02 | Outcomes",
     dotClass: "bg-cerulean",
     badgeClass: "bg-cerulean/10 text-cerulean",
     badge: "Tangibility",
     title: "The Measure",
     subtitle: "Proof beats promises.",
     description:
-      "Every loop ends with something you can ship. Outcomes turn effort into proof and make progress simple to show.",
+      "Every loop ends with something you can ship. Outcomes turn effort into proof so Digital Professionals can show measurable value.",
     bullets: [
       "&bull; Project-based modules",
       "&bull; Real, deployable results each week",
@@ -43,14 +48,14 @@ const journeyCards: JourneyCard[] = [
     ],
   },
   {
-    id: "03 · Growth",
+    id: "03 | Growth",
     dotClass: "bg-allports",
     badgeClass: "bg-allports/10 text-allports",
     badge: "Momentum",
     title: "The Momentum",
     subtitle: "Growth is deliberate iteration.",
     description:
-      "Feedback turns results into insight. Reflection, critique, and AI reviews tighten the distance between attempt and improvement.",
+      "Feedback turns results into insight. Reflection, critique, and AI reviews tighten the distance between attempt and improvement for every Digital Professional.",
     bullets: [
       "&bull; Continuous mentor + AI feedback",
       "&bull; Iterative improvement challenges",
@@ -58,14 +63,14 @@ const journeyCards: JourneyCard[] = [
     ],
   },
   {
-    id: "04 · Mastery",
+    id: "04 | Mastery",
     dotClass: "bg-intl-orange",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     badge: "Transformation",
     title: "The Transformation",
     subtitle: "Mastery is earned by designing the playbook.",
     description:
-      "Repetition becomes intuition. Mastery means you design the system, lead the decisions, and invent new patterns.",
+      "Repetition becomes intuition. Mastery means you design the system, lead the decisions, and invent new patterns that define Digital Professional standards.",
     bullets: [
       "&bull; Advanced project integrations",
       "&bull; AI-simulated interviews & technical drills",
@@ -73,14 +78,14 @@ const journeyCards: JourneyCard[] = [
     ],
   },
   {
-    id: "05 · Acceleration",
+    id: "05 | Acceleration",
     dotClass: "bg-cerulean",
     badgeClass: "bg-cerulean/10 text-cerulean",
     badge: "Multiplier",
     title: "The Multiplier",
     subtitle: "Acceleration is mastery put to work.",
     description:
-      "With fundamentals locked, AI multiplies your reach. Routine work shrinks so experimentation, leverage, and delivery expand.",
+      "With fundamentals locked, AI multiplies your reach. Routine work shrinks so experimentation, leverage, and delivery expand for client-facing Digital Professionals.",
     bullets: [
       "&bull; Rapid prototyping & testing with AI",
       "&bull; Workflow automation & optimization",
@@ -88,14 +93,14 @@ const journeyCards: JourneyCard[] = [
     ],
   },
   {
-    id: "06 · Intelligence",
+    id: "06 | Intelligence",
     dotClass: "bg-allports",
     badgeClass: "bg-allports/10 text-allports",
     badge: "Evolution",
     title: "The Evolution",
     subtitle: "Intelligence is disciplined creativity.",
     description:
-      "Human judgment plus machine reasoning becomes your edge. You learn to co-create with AI, model complex ideas, and ship intelligent systems on demand.",
+      "Human judgment plus machine reasoning becomes your edge. You co-create with AI, model complex ideas, and ship intelligent systems on demand.",
     bullets: [
       "&bull; AI co-creation labs",
       "&bull; Cognitive learning analytics & personalization",
@@ -122,10 +127,7 @@ function JourneyCardView({ card }: { card: JourneyCard }) {
       <p className="text-xs text-slate-300">{card.description}</p>
       <ul className="mt-2 space-y-1 text-xs text-slate-400">
         {card.bullets.map((bullet) => (
-          <li
-            key={bullet}
-            dangerouslySetInnerHTML={{ __html: bullet }}
-          />
+          <li key={bullet} dangerouslySetInnerHTML={{ __html: bullet }} />
         ))}
       </ul>
       <p className="mt-3 text-[11px] font-medium text-slate-400">
@@ -149,7 +151,7 @@ export default function JourneySection() {
               Acceleration &rarr; Intelligence.
               <br />
               One operating system that turns structured effort into confident,
-              AI-native execution.
+              AI-native execution for Digital Professionals.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-[11px] text-slate-400">

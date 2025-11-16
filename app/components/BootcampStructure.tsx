@@ -12,7 +12,7 @@ const tiers: Tier[] = [
     labelClass: "text-intl-orange",
     title: "Daily Learning Sprints",
     body:
-      "Daily sprints mix focused reps, AI prompts, and shippable micro-deliverables so digital professionals build unstoppable momentum.",
+      "Daily sprints mix focused reps, AI prompts, and shippable micro-deliverables so Digital Professionals build unstoppable momentum.",
     bullets: [
       "&bull; 30&ndash;45 min sprint work",
       "&bull; AI-guided planning & task breakdowns",
@@ -26,7 +26,7 @@ const tiers: Tier[] = [
     labelClass: "text-cerulean",
     title: "Weekly Outcome Cycles",
     body:
-      "Each week culminates in a portfolio artifact critiqued by AI and mentors so every digital professional revision has a purpose.",
+      "Each week culminates in a portfolio artifact critiqued by AI and mentors so every Digital Professional revision has a purpose.",
     bullets: [
       "&bull; Weekly milestone project",
       "&bull; AI-supported research & prototyping",
@@ -61,9 +61,9 @@ export default function BootcampStructure() {
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300">
             DOGM.AI bootcamps marry disciplined structure, measurable work, and
-            AI-guided iteration so digital professionals can ship on demand.
+            AI-guided iteration so Digital Professionals can ship on demand.
             Here&apos;s how the daily, weekly, and monthly cycles stack to build
-            an AI-native digital professional.
+            an AI-native Digital Professional.
           </p>
         </div>
 
@@ -97,8 +97,8 @@ export default function BootcampStructure() {
 
         <div className="mx-auto mt-16 max-w-3xl text-center">
           <p className="text-sm leading-relaxed text-slate-300">
-            This layered structure keeps the DOGM.AI chain unbroken for digital
-            professionals:{" "}
+            This layered structure keeps the DOGM.AI chain unbroken for Digital
+            Professionals:{" "}
             <span className="font-semibold text-white">
               Discipline &rarr; Outcomes &rarr; Growth &rarr; Mastery &rarr;
               Acceleration &rarr; Intelligence.

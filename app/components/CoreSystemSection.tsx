@@ -11,7 +11,7 @@ const highlights = [
   },
   {
     label: "Focus",
-    value: "Builders & operators",
+    value: "Digital Professionals & product teams",
     description: "For people shipping real AI-powered work in 2026.",
   },
 ];
@@ -54,16 +54,18 @@ export default function CoreSystemSection() {
               The DOGM.AI Core System
             </h2>
             <p className="mt-4 max-w-xl text-sm text-slate-300">
-              The DOGM.AI Loop is your operating rhythm: Discipline &rarr;
-              Outcomes &rarr; Growth &rarr; Mastery &rarr; Acceleration &rarr;
-              Intelligence. Each state compounds the last so structure becomes
-              evidence and evidence becomes leverage.
+              The DOGM.AI Loop is the operating rhythm built for Digital
+              Professionals: Discipline &rarr; Outcomes &rarr; Growth &rarr;
+              Mastery &rarr; Acceleration &rarr; Intelligence. Each state
+              compounds the last so structure becomes evidence and evidence
+              becomes leverage.
             </p>
             <p className="mt-4 max-w-xl text-sm text-slate-300">
               Under the hood, AI sets the pace &mdash; planning, reviewing, and
               surfacing the next constraint &mdash; while you do the reps. It
               keeps you honest, accelerates critique, and lines up the next
-              challenge so practice stays intentional.
+              challenge so practice stays intentional and SEO-friendly
+              portfolios stay fresh.
             </p>
 
             <div className="mt-6 grid gap-3 text-xs text-slate-300 sm:grid-cols-3">
@@ -118,9 +120,9 @@ export default function CoreSystemSection() {
               </div>
 
               <p className="pt-2 text-[11px] text-slate-400">
-                The system cycles learners through increasingly complex projects
-                while AI tracks friction, surfaces patterns, and personalizes
-                the next sprint.
+                The system cycles Digital Professionals through increasingly
+                complex projects while AI tracks friction, surfaces patterns,
+                and personalizes the next sprint.
               </p>
             </div>
           </div>

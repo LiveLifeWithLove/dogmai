@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "Who is DOGM.AI for?",
     answer:
-      "DOGM.AI is for ambitious builders, designers, operators, and hybrid pros who want AI-native workflows plus evidence of mastery.",
+      "DOGM.AI is for ambitious builders, designers, Digital Professionals, and hybrid pros who want AI-native workflows plus evidence of mastery.",
   },
   {
     question: "Do I need prior experience?",
@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "How do the bootcamps work?",
     answer:
-      "Bootcamps are intensive, project-first sprints. You build, revise, and ship with AI and mentor feedback at every step.",
+      "Bootcamps are intensive, project-first sprints. You build, revise, and ship with AI and mentor feedback at every step so your Digital Professional portfolio keeps growing.",
   },
   {
     question: "What is the time commitment?",
@@ -23,12 +23,7 @@ const faqs = [
     question: "Is there a certificate?",
     answer:
       "Yes. You earn a DOGM.AI certificate plus the portfolio artifacts you produce.",
-  },
-  {
-    question: "How do I apply?",
-    answer:
-      "Hit &ldquo;Apply for 2026&rdquo;, submit the short form, and we&apos;ll send next steps.",
-  },
+  }
 ];
 
 export default function FAQSection() {

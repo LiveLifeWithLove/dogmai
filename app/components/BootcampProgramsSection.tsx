@@ -25,16 +25,16 @@ type BootcampProgram = {
 
 const programs: BootcampProgram[] = [
   {
-    id: "Web Development · 8–12 weeks",
+    id: "Web Development | 8-12 weeks",
     dotClass: "bg-intl-orange",
-    intro: "Web Development · 8–12 weeks",
+    intro: "Web Development | 8-12 weeks",
     badge: "Builder Track",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     title: "Full-stack Product Bootcamp",
     price: "PHP 39,999",
-    duration: "8–12 weeks",
+    duration: "8-12 weeks",
     description:
-      "Build production-grade apps by pairing modern frontends, pragmatic backends, and AI-native workflows. Go from idea &rarr; prototype &rarr; deployed product with copilots wired into every layer.",
+      "Build production-grade apps by pairing modern frontends, pragmatic backends, and AI-native workflows so Digital Professionals can go from idea &rarr; prototype &rarr; deployed product with copilots wired into every layer.",
     buttonText: "See What You'll Build",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
@@ -42,22 +42,22 @@ const programs: BootcampProgram[] = [
     curriculumLabel: "Curriculum snapshot",
     curriculum: [
       {
-        title: "Week 1–2 — Modern frontend (React, Next.js, Tailwind)",
+        title: "Week 1-2 - Modern frontend (React, Next.js, Tailwind)",
         detail:
-          "Build responsive, production-grade interfaces using modern component frameworks, with AI-assisted scaffolding and refactors.",
+          "Build responsive, production-grade interfaces using modern component frameworks with AI-assisted scaffolding and refactors.",
       },
       {
-        title: "Week 3–4 — APIs, auth & databases",
+        title: "Week 3-4 - APIs, auth & databases",
         detail:
           "Design and secure APIs, model relational data, and connect your app to persistent storage with real-world patterns.",
       },
       {
-        title: "Week 5–6 — AI integration & automation flows",
+        title: "Week 5-6 - AI integration & automation flows",
         detail:
           "Embed AI copilots, prompt flows, and background automation into your product to handle real user tasks.",
       },
       {
-        title: "Week 7–8 — Performance, deployment & polish",
+        title: "Week 7-8 - Performance, deployment & polish",
         detail:
           "Optimize speed and reliability, ship to production, set up monitoring, and refine UX details for a launch-ready app.",
       },
@@ -72,16 +72,16 @@ const programs: BootcampProgram[] = [
       "Capstone: Ship a live product with telemetry, docs, and AI-enabled workflows ready for real users.",
   },
   {
-    id: "UI/UX Design · 6–10 weeks",
+    id: "UI/UX Design | 6-10 weeks",
     dotClass: "bg-cerulean",
-    intro: "UI/UX Design · 6–10 weeks",
+    intro: "UI/UX Design | 6-10 weeks",
     badge: "Designer Track",
     badgeClass: "bg-cerulean/10 text-cerulean",
     title: "Intelligent Interface Bootcamp",
     price: "PHP 19,999",
-    duration: "6–10 weeks",
+    duration: "6-10 weeks",
     description:
-      "Craft intelligent interfaces from blank canvas to system-level thinking. Blend research, visual direction, and AI-assisted ideation to iterate faster.",
+      "Craft intelligent interfaces from blank canvas to system-level thinking. Digital Professionals blend research, visual direction, and AI-assisted ideation to iterate faster.",
     buttonText: "View Sample Projects",
     buttonClass:
       "bg-gradient-to-r from-cerulean to-allports text-ebony",
@@ -89,22 +89,22 @@ const programs: BootcampProgram[] = [
     curriculumLabel: "Curriculum snapshot",
     curriculum: [
       {
-        title: "Week 1–2 — UX research, user flows & journeys",
+        title: "Week 1-2 - UX research, user flows & journeys",
         detail:
           "Interview users, map journeys, and define flows that solve real problems, supported by AI-assisted research and insight clustering.",
       },
       {
-        title: "Week 3–4 — Design systems & Figma mastery",
+        title: "Week 3-4 - Design systems & Figma mastery",
         detail:
           "Build scalable design systems, components, and tokens in Figma to keep interfaces consistent and easy to iterate.",
       },
       {
-        title: "Week 5–6 — Prototyping, testing & iteration",
+        title: "Week 5-6 - Prototyping, testing & iteration",
         detail:
           "Create interactive prototypes, test with users, and refine flows quickly using feedback and AI-generated variations.",
       },
       {
-        title: "Optional — AI-assisted creative exploration labs",
+        title: "Optional - AI-assisted creative exploration labs",
         detail:
           "Use AI tools to explore visual directions, generate concepts, and experiment with smart interface patterns.",
       },
@@ -119,16 +119,16 @@ const programs: BootcampProgram[] = [
       "Capstone: Publish a complete case study with interaction prototypes and clear decision rationale.",
   },
   {
-    id: "Data Science · 8–12 weeks",
+    id: "Data Science | 8-12 weeks",
     dotClass: "bg-allports",
-    intro: "Data Science · 8–12 weeks",
+    intro: "Data Science | 8-12 weeks",
     badge: "Analyst Track",
     badgeClass: "bg-allports/10 text-allports",
     title: "Applied Data & AI Bootcamp",
     price: "PHP 29,999",
-    duration: "8–12 weeks",
+    duration: "8-12 weeks",
     description:
-      "Turn raw data into intelligence. Master Python, analytics, and applied AI while solving real company-style problems and telling clear stories.",
+      "Turn raw data into intelligence. Master Python, analytics, and applied AI while solving real company-style problems and telling search-friendly stories for stakeholders.",
     buttonText: "Check Data Science Outputs",
     buttonClass:
       "bg-gradient-to-r from-allports to-cerulean text-ebony",
@@ -136,22 +136,22 @@ const programs: BootcampProgram[] = [
     curriculumLabel: "Curriculum snapshot",
     curriculum: [
       {
-        title: "Week 1–2 — Python, data wrangling & exploration",
+        title: "Week 1-2 - Python, data wrangling & exploration",
         detail:
           "Set up your environment, clean messy datasets, and explore patterns using Python, Pandas, and visual summaries.",
       },
       {
-        title: "Week 3–4 — Analytics, dashboards & reporting",
+        title: "Week 3-4 - Analytics, dashboards & reporting",
         detail:
           "Build dashboards and reports that answer business questions, with AI helping you frame metrics and surface insights.",
       },
       {
-        title: "Week 5–6 — Intro ML & experiment design",
+        title: "Week 5-6 - Intro ML & experiment design",
         detail:
           "Train baseline machine learning models, design simple experiments, and evaluate results with clear reasoning.",
       },
       {
-        title: "Week 7–8 — AI-assisted analysis & narratives",
+        title: "Week 7-8 - AI-assisted analysis & narratives",
         detail:
           "Use AI to synthesize findings, generate executive-ready narratives, and communicate recommendations with confidence.",
       },
@@ -166,16 +166,16 @@ const programs: BootcampProgram[] = [
       "Capstone: Deliver an end-to-end data project with an executive-ready narrative and AI-generated insight pack.",
   },
   {
-    id: "Digital Professional · 6–10 weeks",
+    id: "Digital Professional | 6-10 weeks",
     dotClass: "bg-intl-orange",
-    intro: "Digital Professional · 6–10 weeks",
+    intro: "Digital Professional | 6-10 weeks",
     badge: "Execution Track",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
-    title: "AI-Enhanced Digital Professional Bootcamp",
+    title: "Digital Professional Execution Bootcamp",
     price: "PHP 14,999",
-    duration: "6–10 weeks",
+    duration: "6-10 weeks",
     description:
-      "Run modern digital operations with AI as your teammate. Automate the busywork, analyze, create, and ship client-ready outputs with confidence.",
+      "Run modern Digital Professional workflows with AI as your teammate. Automate busywork, analyze, create, and ship client-ready outputs with confidence.",
     buttonText: "View Digital Professional Projects",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
@@ -183,22 +183,22 @@ const programs: BootcampProgram[] = [
     curriculumLabel: "Curriculum snapshot",
     curriculum: [
       {
-        title: "Week 1–2 — Digital Systems & AI Workflows",
+        title: "Week 1-2 - Digital systems & AI workflows",
         detail:
           "Set up robust productivity systems, manage tasks, and use AI to research, prioritize, and execute high-impact work.",
       },
       {
-        title: "Week 3–4 — Automation & Data Handling",
+        title: "Week 3-4 - Automation & data handling",
         detail:
           "Clean and organize data, build simple dashboards, and design automations that reduce manual, repetitive tasks.",
       },
       {
-        title: "Week 5–6 — Communication, Content & Client Delivery",
+        title: "Week 5-6 - Communication, content & client delivery",
         detail:
           "Create clear content, presentations, and reports, and deliver polished outputs that clients and stakeholders can act on.",
       },
       {
-        title: "Optional — Intelligent Operations Labs",
+        title: "Optional - Intelligent workflow labs",
         detail:
           "Experiment with advanced automations, multi-step workflows, and performance systems for high-leverage digital work.",
       },
@@ -229,11 +229,17 @@ export default function BootcampProgramsSection() {
             </h2>
             <p className="mt-3 max-w-xl text-sm text-slate-300">
               Every bootcamp runs on the DOGM.AI Journey &mdash; concise,
-              outcome-driven courses with weekly milestones and shipped work.
+              outcome-driven programs with weekly milestones, shipped work, and
+              SEO-friendly case studies for Digital Professionals.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-[11px] text-slate-400">
-          {["6\u201312 Weeks", "Project-Driven", "AI-Integrated"].map((tag) => (
+            {[
+              "6-12 Weeks",
+              "Project-Driven",
+              "AI-Integrated",
+              "Digital Professional Focused",
+            ].map((tag) => (
               <span
                 key={tag}
                 className="rounded-full border border-slate-700 px-3 py-1"
@@ -252,7 +258,9 @@ export default function BootcampProgramsSection() {
             >
               <div className="mb-3 flex items-center justify-between text-[11px] text-slate-400">
                 <span className="inline-flex items-center gap-2">
-                  <span className={`h-1.5 w-1.5 rounded-full ${program.dotClass}`} />
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full ${program.dotClass}`}
+                  />
                   {program.intro}
                 </span>
                 <span
