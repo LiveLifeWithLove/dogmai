@@ -11,8 +11,8 @@ const highlights = [
   },
   {
     label: "Focus",
-    value: "Digital Professionals & product teams",
-    description: "For people shipping real AI-powered work in 2026.",
+    value: "Digital Professionals",
+    description: "For people shipping real AI-powered work.",
   },
 ];
 

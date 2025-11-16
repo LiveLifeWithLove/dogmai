@@ -42,7 +42,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center gap-6 pt-4 text-xs text-slate-400">
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-cerulean" />
-              Daily accountability for builders, designers, and Digital Professionals
+              Daily accountability for Builders, Designers, and Digital Professionals
             </div>
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-allports" />

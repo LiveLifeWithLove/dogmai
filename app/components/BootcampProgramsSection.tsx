@@ -10,12 +10,11 @@ type BootcampProgram = {
   badge: string;
   badgeClass: string;
   title: string;
-  price: string;
   duration: string;
   description: string;
   buttonText: string;
   buttonClass: string;
-  priceClass: string;
+  tags: string[];
   curriculumLabel: string;
   curriculum: CurriculumItem[];
   stackLabel: string;
@@ -31,14 +30,19 @@ const programs: BootcampProgram[] = [
     badge: "Full-Stack Product Builder",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     title: "Full-Stack Product Builder (8-12 weeks)",
-    price: "PHP 39,999",
     duration: "8-12 weeks",
     description:
       "Build production-grade apps from idea &rarr; prototype &rarr; deployed product using modern frontends, pragmatic backends, and AI-native workflows.",
     buttonText: "See Curriculum",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
-    priceClass: "bg-intl-orange/20 text-intl-orange",
+    tags: [
+      "Ship full-stack products",
+      "AI pair programming",
+      "Deploy & monitor",
+      "Mentor feedback loops",
+      "Portfolio proof",
+    ],
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
@@ -78,14 +82,19 @@ const programs: BootcampProgram[] = [
     badge: "Intelligent Interface Designer",
     badgeClass: "bg-cerulean/10 text-cerulean",
     title: "Intelligent Interface Designer (6-10 weeks)",
-    price: "PHP 19,999",
     duration: "6-10 weeks",
     description:
       "Design interfaces that think. Blend UX fundamentals with AI-assisted creativity to produce systems, prototypes, and polished case studies.",
     buttonText: "View Curriculum",
     buttonClass:
       "bg-gradient-to-r from-cerulean to-allports text-ebony",
-    priceClass: "bg-cerulean/20 text-cerulean",
+    tags: [
+      "Design systems mastery",
+      "AI concept sprints",
+      "User research ready",
+      "Prototype storytelling",
+      "Case study polish",
+    ],
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
@@ -124,14 +133,19 @@ const programs: BootcampProgram[] = [
     badge: "Data Science for Digital Professionals",
     badgeClass: "bg-allports/10 text-allports",
     title: "Data Science for Digital Professionals (8-12 weeks)",
-    price: "PHP 29,999",
     duration: "8-12 weeks",
     description:
       "Turn raw data into intelligence with Python, analytics, and applied AI. Solve real business problems and synthesize insights stakeholders trust.",
     buttonText: "Check Curriculum",
     buttonClass:
       "bg-gradient-to-r from-allports to-cerulean text-ebony",
-    priceClass: "bg-allports/20 text-allports",
+    tags: [
+      "Python-first workflows",
+      "AI-assisted analysis",
+      "Dashboard storytelling",
+      "Executive insight decks",
+      "Experiment mindset",
+    ],
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
@@ -167,14 +181,19 @@ const programs: BootcampProgram[] = [
     badge: "Digital Professional Execution Program",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     title: "Digital Professional Execution Program (6-10 weeks)",
-    price: "PHP 14,999",
     duration: "6-10 weeks",
     description:
       "Master modern Digital Professional workflows: automation, analysis, content, delivery, and high-quality execution using AI as your teammate.",
     buttonText: "Review Curriculum",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
-    priceClass: "bg-intl-orange/20 text-intl-orange",
+    tags: [
+      "Automation architect",
+      "AI productivity ops",
+      "Client-ready deliverables",
+      "Cross-tool mastery",
+      "Systems thinking",
+    ],
     curriculumLabel: "Curriculum Overview",
     curriculum: [
       {
@@ -215,17 +234,23 @@ export default function BootcampProgramsSection() {
       className="border-b border-white/5 bg-ebony/90 py-16"
     >
       <div className="mx-auto max-w-6xl px-4">
-        <div className="flex flex-col items-start gap-6 pb-8">
-          <div>
+        <div className="flex flex-col items-start justify-between gap-6 pb-10 md:flex-row md:items-end">
+          <div className="w-2/3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
               Bootcamps Powered by the DOGM.AI System
             </p>
-            <h2 className="mt-2 whitespace-nowrap font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
               Choose your track. Build real projects. Become AI-native.
             </h2>
             <p className="mt-3 max-w-xl text-sm text-slate-300">
-              All programs are 6-12 weeks, project-driven, AI-integrated, and
-              designed specifically for Digital Professionals.
+              Each bootcamp is a focused loop of Discipline &rarr; Outcomes &rarr;
+              Growth &rarr; Mastery with AI copilots built into every workflow so
+              you keep shipping better work every week.
+            </p>
+            <p className="mt-2 max-w-xl text-sm text-slate-300">
+              Pick the track that matches your craft and build production-ready
+              proof that recruiters, clients, and hiring managers can actually
+              click through.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-[11px] text-slate-400">
@@ -264,15 +289,18 @@ export default function BootcampProgramsSection() {
               <h3 className="text-sm font-semibold text-white">
                 {program.title}
               </h3>
-              <div className="mt-1 mb-2 flex flex-wrap items-center gap-2">
-                <span
-                  className={`inline-block rounded-full px-3 py-1 text-xs font-bold shadow-sm ${program.priceClass}`}
-                >
-                  {program.price}
-                </span>
-                <span className="text-xs text-slate-400">
+              <div className="mt-2 mb-2 flex flex-wrap gap-2 text-[11px] text-slate-400">
+                <span className="rounded-full border border-white/10 px-2 py-0.5">
                   {program.duration}
                 </span>
+                {program.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-slate-800 px-2.5 py-0.5"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
               <p
                 className="mt-2 text-xs text-slate-300"
