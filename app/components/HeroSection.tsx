@@ -20,29 +20,50 @@ export default function HeroSection() {
             priority
             className="object-cover object-center opacity-70"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ebony/50 via-ebony/70 to-ebony/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ebony/40 via-ebony/80 to-ebony/95" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_-10%,rgba(250,84,4,0.25),transparent_45%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_-5%,rgba(4,183,236,0.18),transparent_40%)]" />
         </div>
       </div>
-      <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-16 md:flex-row md:items-center md:pb-24 md:pt-20">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-20 pt-20 lg:flex-row lg:items-center">
         <div className="flex-1 space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-intl-orange/30 bg-intl-orange/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-intl-orange">
-            <span className="h-1.5 w-1.5 rounded-full bg-intl-orange" />
-            DOGM.AI
+          <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-slate-300">
+            <span className="inline-flex items-center gap-2 rounded-full border border-intl-orange/40 bg-intl-orange/10 px-3 py-1 text-intl-orange">
+              <span className="h-1.5 w-1.5 rounded-full bg-intl-orange" />
+              DOGM.AI
+            </span>
+            <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] text-slate-200">
+              Next cohort: Feb 16 · 50 seats
+            </span>
           </div>
 
-          <div className="space-y-3">
-            <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-              The Discipline Engine for Modern Digital Professionals
+          <div className="space-y-4">
+            <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Build the discipline to learn, ship, and prove AI-native mastery.
             </h1>
-            <p className="text-lg font-semibold text-slate-100 sm:text-xl">
-              Accelerate Mastery. Learn with AI. Build Proof.
+            <p className="text-base text-slate-200 sm:text-lg">
+              We turn your daily reps into portfolio-ready proof with AI copilots, mentor critiques,
+              and a system that compounds your craft every single week.
             </p>
           </div>
 
-          <p className="max-w-xl text-pretty text-sm text-slate-300 sm:text-base">
-            Become the AI-native professional who can learn, build, and ship on
-            demand. 6&ndash;12 weeks. Real projects. Repeatable mastery.
-          </p>
+          <div className="grid gap-3 text-sm text-slate-200 sm:grid-cols-3">
+            {[
+              { label: "AI-guided sprints", value: "Daily" },
+              { label: "Shipped outcomes", value: "Weekly" },
+              { label: "Readiness assessment", value: "Included" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-center shadow-[0_10px_30px_rgba(0,0,0,0.4)]"
+              >
+                <p className="text-lg font-bold text-white">{item.value}</p>
+                <p className="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
 
           <div className="flex flex-wrap items-center gap-4">
             <a
@@ -60,16 +81,29 @@ export default function HeroSection() {
               <span className="text-lg">&rarr;</span>
             </button>
           </div>
+        </div>
 
-          <div className="flex flex-wrap items-center gap-6 pt-4 text-xs text-slate-400">
-            <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-cerulean" />
-              Daily accountability for Builders, Designers, and Digital Professionals
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-allports" />
-              AI is your coach, not your shortcut.
-            </div>
+        <div className="w-full max-w-sm space-y-4 rounded-3xl border border-white/10 bg-black/50 p-5 text-sm text-slate-200 shadow-[0_25px_55px_rgba(0,0,0,0.55)]">
+          <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-intl-orange">
+              Why DOGM.AI
+            </p>
+            <p className="mt-2 text-base font-semibold text-white">
+              Practice with AI. Ship proof. Design a career narrative recruiters believe.
+            </p>
+            <p className="mt-2 text-xs text-slate-400">
+              Daily accountability + weekly outcomes + AI readiness assessments.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
+            <p className="text-[11px] uppercase tracking-[0.25em] text-cerulean">
+              Built for Digital Professionals
+            </p>
+            <ul className="mt-2 space-y-2 text-xs text-slate-300">
+              <li>• Builders: launch AI-native products faster.</li>
+              <li>• Designers: craft intelligent interfaces with proof.</li>
+              <li>• Analysts & operators: architect automations + insights.</li>
+            </ul>
           </div>
         </div>
       </div>

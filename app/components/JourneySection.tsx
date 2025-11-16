@@ -156,8 +156,15 @@ function JourneyCardView({ card }: { card: JourneyCard }) {
 
 export default function JourneySection() {
   return (
-    <AnimatedSection id="journey" className="border-b border-white/5 bg-ebony/80 py-16">
-      <div className="mx-auto max-w-6xl px-4">
+    <AnimatedSection
+      id="journey"
+      className="relative overflow-hidden border-b border-white/5 bg-ebony/80 py-16"
+    >
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-intl-orange/30 to-transparent" />
+        <div className="absolute inset-x-0 top-2/3 h-px bg-gradient-to-r from-transparent via-cerulean/25 to-transparent" />
+      </div>
+      <div className="relative mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-start justify-between gap-6 pb-10 md:flex-row md:items-end">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
