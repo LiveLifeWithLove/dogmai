@@ -76,33 +76,40 @@ export default function BootcampStructure() {
           {tiers.map((tier) => (
             <div
               key={tier.title}
-              className="rounded-3xl border border-slate-800 bg-gradient-to-b from-black/40 to-black/80 p-8 shadow-[0_10px_35px_rgba(0,0,0,0.6)]"
+              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/85 p-8 shadow-[0_10px_35px_rgba(0,0,0,0.6)]"
             >
-              <span
-                className={`inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider ${tier.labelClass}`}
-              >
-                {tier.label}
-              </span>
-              <h3 className="mt-2 text-lg font-bold text-white">{tier.title}</h3>
-              <p className="mt-3 text-xs leading-relaxed text-slate-300">
-                {tier.body}
-              </p>
-              <ul className="mt-5 space-y-3 text-[12px] text-slate-400">
-                {tier.bullets.map((bullet) => (
-                  <li
-                    key={bullet}
-                    className="flex items-center gap-3 text-[12px] text-slate-300"
-                  >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/40">
-                      <span className={`h-2.5 w-2.5 rounded-full ${tier.dotClass}`} />
-                    </span>
-                    <span className="text-slate-300">{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                {tier.footer}
-              </p>
+              <div className="pointer-events-none absolute inset-px rounded-[2rem] border border-white/5 opacity-30 transition duration-300 group-hover:opacity-60" />
+              <div className="relative z-10 flex h-full flex-col">
+                <span
+                  className={`inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider ${tier.labelClass}`}
+                >
+                  {tier.label}
+                </span>
+                <h3 className="mt-2 text-lg font-bold text-white">
+                  {tier.title}
+                </h3>
+                <p className="mt-3 text-xs leading-relaxed text-slate-300">
+                  {tier.body}
+                </p>
+                <ul className="mt-5 space-y-3 text-[12px] text-slate-400">
+                  {tier.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="flex items-center gap-3 text-[12px] text-slate-300"
+                    >
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/40">
+                        <span
+                          className={`h-2.5 w-2.5 rounded-full ${tier.dotClass}`}
+                        />
+                      </span>
+                      <span className="text-slate-300">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-auto pt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                  {tier.footer}
+                </p>
+              </div>
             </div>
           ))}
         </div>

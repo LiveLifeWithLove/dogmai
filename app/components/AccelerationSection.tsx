@@ -46,23 +46,26 @@ export default function AccelerationSection() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid auto-rows-fr gap-8 md:grid-cols-3">
           {accelerators.map((item) => (
             <div
               key={item.label}
-              className="rounded-3xl border border-slate-800 bg-gradient-to-b from-ebony/80 to-black/70 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.85)]"
+              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 p-6 shadow-[0_18px_35px_rgba(0,0,0,0.65)]"
             >
-              <div className="mb-3 flex items-center gap-2">
-                <span className={`h-2 w-2 rounded-full ${item.dotClass}`} />
-                <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-300">
-                  {item.label}
-                </span>
+              <div className="pointer-events-none absolute inset-px rounded-[1.8rem] border border-white/5 opacity-30 transition duration-300 group-hover:opacity-60" />
+              <div className="relative z-10 flex flex-col">
+                <div className="mb-3 flex items-center gap-2">
+                  <span className={`h-2 w-2 rounded-full ${item.dotClass}`} />
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-300">
+                    {item.label}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                <p
+                  className="mt-2 text-xs text-slate-300 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                />
               </div>
-              <h3 className="text-lg font-bold text-white">{item.title}</h3>
-              <p
-                className="mt-2 text-xs text-slate-300 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: item.description }}
-              />
             </div>
           ))}
         </div>

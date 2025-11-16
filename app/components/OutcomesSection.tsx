@@ -83,14 +83,15 @@ export default function OutcomesSection() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-2xl border border-slate-800 bg-ebony/80 px-3 py-3"
+                  className="group relative overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 px-3 py-3 shadow-[0_12px_25px_rgba(0,0,0,0.4)]"
                 >
+                  <div className="pointer-events-none absolute inset-px rounded-[1.25rem] border border-white/5 opacity-30 group-hover:opacity-60" />
                   <div
-                    className={`font-heading text-lg font-extrabold ${stat.color}`}
+                    className={`relative font-heading text-lg font-extrabold ${stat.color}`}
                   >
                     {stat.value}
                   </div>
-                  <div className="mt-1 text-[10px] uppercase tracking-[0.15em] text-slate-400">
+                  <div className="relative mt-1 text-[10px] uppercase tracking-[0.15em] text-slate-400">
                     {stat.label}
                   </div>
                 </div>
@@ -122,7 +123,8 @@ export default function OutcomesSection() {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-slate-800 bg-ebony/80 p-4 text-xs text-slate-300 shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+            <div className="group relative overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 p-4 text-xs text-slate-300 shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+              <div className="pointer-events-none absolute inset-px rounded-[1.5rem] border border-white/5 opacity-30 group-hover:opacity-60" />
               <p className="font-semibold text-white">
                 &ldquo;Before DOGM.AI I poked at AI tools. After the bootcamp I
                 had a workflow, a bar to measure against, and a live project
@@ -134,15 +136,16 @@ export default function OutcomesSection() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-ebony to-black/40 p-5 text-xs text-slate-300 shadow-[0_18px_45px_rgba(0,0,0,0.85)]">
-            <div className="mb-3 flex items-center justify-between text-[11px] text-slate-400">
+          <div className="group relative overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 p-5 text-xs text-slate-300 shadow-[0_18px_45px_rgba(0,0,0,0.85)]">
+            <div className="pointer-events-none absolute inset-px rounded-[2rem] border border-white/5 opacity-30 transition duration-300 group-hover:opacity-60" />
+            <div className="relative mb-3 flex items-center justify-between text-[11px] text-slate-400">
               <span>Where This Takes You</span>
               <span className="rounded-full bg-black/60 px-2 py-0.5 text-[10px] uppercase tracking-[0.16em]">
                 Career Outcomes
               </span>
             </div>
 
-            <div className="space-y-4">
+            <div className="relative space-y-4">
               {outcomeTracks.map((track) => (
                 <div
                   key={track.title}
@@ -166,7 +169,7 @@ export default function OutcomesSection() {
               ))}
             </div>
 
-            <div className="mt-4 border-t border-slate-800/80 pt-3 text-[11px] text-slate-400">
+            <div className="relative mt-4 border-t border-white/5 pt-3 text-[11px] text-slate-400">
               <span className="font-semibold uppercase tracking-[0.16em]">
                 TL;DR
               </span>

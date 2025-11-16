@@ -48,18 +48,23 @@ export default function MasterySummarySection() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid auto-rows-fr gap-5 md:grid-cols-2">
           {transformations.map((item) => (
             <div
               key={item.number}
-              className="flex gap-4 rounded-3xl border border-slate-800 bg-gradient-to-br from-black/40 to-black/80 p-5 text-left shadow-[0_15px_40px_rgba(0,0,0,0.6)]"
+              className="group relative flex h-full gap-4 overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 p-5 text-left shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/50 text-lg font-bold text-intl-orange">
-                {item.number}
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                <p className="text-sm text-slate-300">{item.description}</p>
+              <div className="pointer-events-none absolute inset-px rounded-[1.6rem] border border-white/5 opacity-30 transition duration-300 group-hover:opacity-60" />
+              <div className="relative z-10 flex h-full gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/50 text-lg font-bold text-intl-orange">
+                  {item.number}
+                </div>
+                <div className="space-y-1">
+                  <h3 className="text-lg font-semibold text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-slate-300">{item.description}</p>
+                </div>
               </div>
             </div>
           ))}

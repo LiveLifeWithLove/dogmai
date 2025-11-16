@@ -17,7 +17,6 @@ type BootcampProgram = {
   buttonText: string;
   buttonClass: string;
   tags: string[];
-  borderGradient: string;
   curriculumLabel: string;
   curriculum: CurriculumItem[];
   stackLabel: string;
@@ -39,7 +38,6 @@ const programs: BootcampProgram[] = [
     buttonText: "See Curriculum",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
-    borderGradient: "from-intl-orange/70 via-intl-orange/40 to-cerulean/60",
     tags: [
       "Ship full-stack products",
       "AI pair programming",
@@ -92,7 +90,6 @@ const programs: BootcampProgram[] = [
     buttonText: "View Curriculum",
     buttonClass:
       "bg-gradient-to-r from-cerulean to-allports text-ebony",
-    borderGradient: "from-cerulean/70 via-cerulean/40 to-allports/60",
     tags: [
       "Design systems mastery",
       "AI concept sprints",
@@ -144,7 +141,6 @@ const programs: BootcampProgram[] = [
     buttonText: "Check Curriculum",
     buttonClass:
       "bg-gradient-to-r from-allports to-cerulean text-ebony",
-    borderGradient: "from-allports/70 via-cerulean/40 to-allports/60",
     tags: [
       "Python-first workflows",
       "AI-assisted analysis",
@@ -193,7 +189,6 @@ const programs: BootcampProgram[] = [
     buttonText: "Review Curriculum",
     buttonClass:
       "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
-    borderGradient: "from-intl-orange/70 via-cerulean/40 to-intl-orange/60",
     tags: [
       "Automation architect",
       "AI productivity ops",
@@ -274,18 +269,14 @@ export default function BootcampProgramsSection() {
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid auto-rows-fr gap-6 md:grid-cols-2">
           {programs.map((program) => (
-            <article key={program.id} className="group relative rounded-3xl">
-              <div className="pointer-events-none absolute inset-0 rounded-3xl">
-                <div
-                  className={`absolute inset-0 rounded-3xl border border-white/5 opacity-60`}
-                />
-                <div
-                  className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${program.borderGradient} opacity-60 blur-sm transition duration-300 group-hover:opacity-90 group-hover:blur`}
-                />
-              </div>
-              <div className="relative flex flex-col rounded-3xl border border-slate-800 bg-gradient-to-b from-black/40 to-black/80 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.85)]">
+            <article
+              key={program.id}
+              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 via-black/80 to-black/90 p-6 shadow-[0_18px_35px_rgba(0,0,0,0.65)]"
+            >
+              <div className="pointer-events-none absolute inset-px rounded-[1.4rem] border border-white/5 opacity-40 transition duration-300 group-hover:opacity-70" />
+              <div className="relative z-10 flex h-full flex-col gap-4">
                 <div className="mb-3 flex items-center justify-between text-[11px] text-slate-400">
                   <span className="inline-flex items-center gap-2">
                     <span
@@ -299,33 +290,33 @@ export default function BootcampProgramsSection() {
                     {program.badge}
                   </span>
                 </div>
-                <h3 className="text-sm font-semibold text-white">
+                <h3 className="text-base font-semibold text-white">
                   {program.title}
                 </h3>
-                <div className="mt-2 mb-2 flex flex-wrap gap-2 text-[11px] text-slate-400">
+                <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
                   <span className="rounded-full border border-white/10 px-2 py-0.5">
                     {program.duration}
                   </span>
                   {program.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-slate-800/70 bg-black/30 px-2.5 py-0.5"
+                      className="rounded-full border border-slate-800/60 bg-black/30 px-2.5 py-0.5"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
                 <p
-                  className="mt-2 text-xs text-slate-300"
+                  className="text-xs text-slate-300"
                   dangerouslySetInnerHTML={{ __html: program.description }}
                 />
                 <button
-                  className={`mt-4 rounded-full px-5 py-2 text-xs font-bold shadow-lg transition-all duration-200 hover:scale-105 ${program.buttonClass}`}
+                  className={`rounded-full px-5 py-2 text-xs font-bold shadow-lg transition-all duration-200 hover:scale-105 ${program.buttonClass}`}
                 >
                   {program.buttonText}
                 </button>
 
-                <div className="mt-4 border-t border-slate-800/80 pt-3">
+                <div className="border-t border-white/5 pt-3">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">
                     {program.curriculumLabel}
                   </p>
@@ -340,7 +331,7 @@ export default function BootcampProgramsSection() {
                   </ul>
                 </div>
 
-                <div className="mt-4 border-t border-slate-800/80 pt-3">
+                <div className="border-t border-white/5 pt-3">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">
                     {program.stackLabel}
                   </p>
@@ -351,7 +342,7 @@ export default function BootcampProgramsSection() {
                   </ul>
                 </div>
 
-                <p className="mt-4 text-[11px] text-slate-400">
+                <p className="mt-auto pt-4 text-[11px] text-slate-400">
                   {program.capstone}
                 </p>
               </div>
