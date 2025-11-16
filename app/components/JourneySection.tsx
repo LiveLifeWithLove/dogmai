@@ -8,6 +8,7 @@ const tags = [
 type JourneyCard = {
   id: string;
   dotClass: string;
+  bulletDotClass: string;
   badgeClass: string;
   badge: string;
   title: string;
@@ -20,6 +21,7 @@ const journeyCards: JourneyCard[] = [
   {
     id: "01 | Discipline",
     dotClass: "bg-intl-orange",
+    bulletDotClass: "bg-intl-orange",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     badge: "Structure",
     title: "The Foundation",
@@ -27,14 +29,15 @@ const journeyCards: JourneyCard[] = [
     description:
       "Structure beats hype. Daily sprints, AI prompts, and reflection rituals build the muscle Digital Professionals rely on to deliver even when motivation dips.",
     bullets: [
-      "&bull; Daily learning sprints",
-      "&bull; Guided task systems & accountability",
-      "&bull; AI for planning & performance tracking",
+      "Daily learning sprints",
+      "Guided task systems & accountability",
+      "AI for planning & performance tracking",
     ],
   },
   {
     id: "02 | Outcomes",
     dotClass: "bg-cerulean",
+    bulletDotClass: "bg-cerulean",
     badgeClass: "bg-cerulean/10 text-cerulean",
     badge: "Tangibility",
     title: "The Measure",
@@ -42,14 +45,15 @@ const journeyCards: JourneyCard[] = [
     description:
       "Every loop ends with something you can ship. Outcomes turn effort into proof so Digital Professionals can show measurable value.",
     bullets: [
-      "&bull; Project-based modules",
-      "&bull; Real, deployable results each week",
-      "&bull; Portfolio built by incremental achievement",
+      "Project-based modules",
+      "Real, deployable results each week",
+      "Portfolio built by incremental achievement",
     ],
   },
   {
     id: "03 | Growth",
     dotClass: "bg-allports",
+    bulletDotClass: "bg-allports",
     badgeClass: "bg-allports/10 text-allports",
     badge: "Momentum",
     title: "The Momentum",
@@ -57,14 +61,15 @@ const journeyCards: JourneyCard[] = [
     description:
       "Feedback turns results into insight. Reflection, critique, and AI reviews tighten the distance between attempt and improvement for every Digital Professional.",
     bullets: [
-      "&bull; Continuous mentor + AI feedback",
-      "&bull; Iterative improvement challenges",
-      "&bull; Growth dashboards & trajectories",
+      "Continuous mentor + AI feedback",
+      "Iterative improvement challenges",
+      "Growth dashboards & trajectories",
     ],
   },
   {
     id: "04 | Mastery",
     dotClass: "bg-intl-orange",
+    bulletDotClass: "bg-intl-orange",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     badge: "Transformation",
     title: "The Transformation",
@@ -72,14 +77,15 @@ const journeyCards: JourneyCard[] = [
     description:
       "Repetition becomes intuition. Mastery means you design the system, lead the decisions, and invent new patterns that define Digital Professional standards.",
     bullets: [
-      "&bull; Advanced project integrations",
-      "&bull; AI-simulated interviews & technical drills",
-      "&bull; Mentorship for portfolio & personal brand",
+      "Advanced project integrations",
+      "AI-simulated interviews & technical drills",
+      "Mentorship for portfolio & personal brand",
     ],
   },
   {
     id: "05 | Acceleration",
     dotClass: "bg-cerulean",
+    bulletDotClass: "bg-cerulean",
     badgeClass: "bg-cerulean/10 text-cerulean",
     badge: "Multiplier",
     title: "The Multiplier",
@@ -87,14 +93,15 @@ const journeyCards: JourneyCard[] = [
     description:
       "With fundamentals locked, AI multiplies your reach. Routine work shrinks so experimentation, leverage, and delivery expand for client-facing Digital Professionals.",
     bullets: [
-      "&bull; Rapid prototyping & testing with AI",
-      "&bull; Workflow automation & optimization",
-      "&bull; Real-world speed-to-deployment drills",
+      "Rapid prototyping & testing with AI",
+      "Workflow automation & optimization",
+      "Real-world speed-to-deployment drills",
     ],
   },
   {
     id: "06 | Intelligence",
     dotClass: "bg-allports",
+    bulletDotClass: "bg-allports",
     badgeClass: "bg-allports/10 text-allports",
     badge: "Evolution",
     title: "The Evolution",
@@ -102,9 +109,9 @@ const journeyCards: JourneyCard[] = [
     description:
       "Human judgment plus machine reasoning becomes your edge. You co-create with AI, model complex ideas, and ship intelligent systems on demand.",
     bullets: [
-      "&bull; AI co-creation labs",
-      "&bull; Cognitive learning analytics & personalization",
-      "&bull; Research & innovation challenges",
+      "AI co-creation labs",
+      "Cognitive learning analytics & personalization",
+      "Research & innovation challenges",
     ],
   },
 ];
@@ -125,9 +132,14 @@ function JourneyCardView({ card }: { card: JourneyCard }) {
       </div>
       <h3 className="text-sm font-semibold text-white">{card.title}</h3>
       <p className="text-xs text-slate-300">{card.description}</p>
-      <ul className="mt-2 space-y-1 text-xs text-slate-400">
+      <ul className="mt-2 space-y-2 text-xs text-slate-400">
         {card.bullets.map((bullet) => (
-          <li key={bullet} dangerouslySetInnerHTML={{ __html: bullet }} />
+          <li key={bullet} className="flex items-start gap-3 text-[11px]">
+            <span className="mt-[1px] flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-black/50">
+              <span className={`h-2 w-2 rounded-full ${card.bulletDotClass}`} />
+            </span>
+            <span>{bullet}</span>
+          </li>
         ))}
       </ul>
       <p className="mt-3 text-[11px] font-medium text-slate-400">
