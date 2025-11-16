@@ -2,28 +2,29 @@ import AnimatedSection from "./AnimatedSection";
 
 const faqs = [
   {
-    question: "Who is DOGM.AI for?",
+    question: "Who is DOGM.AI for and what backgrounds thrive?",
     answer:
-      "Ambitious builders, designers, analysts, and Digital Professionals who want AI-native workflows and proof of mastery.",
+      "Ambitious builders, designers, analysts, operators, and solo professionals who already create value but want to become the AI-native person on their team. We coach career switchers, upskill in-role talent, and support founders who need high-output systems.",
   },
   {
-    question: "Do I need prior experience?",
+    question: "Do I need prior experience or a portfolio to join?",
     answer:
-      "No. Foundations + AI + mentors meet you where you are.",
+      "No formal prerequisite is required. You bring curiosity, discipline, and 6+ hours a week. We supply structured foundations, AI copilots, mentor feedback, and execution templates that match your level whether you&apos;re a beginner or already senior.",
   },
   {
-    question: "How do the bootcamps work?",
+    question: "How do the bootcamps actually run week to week?",
     answer:
-      "Intensive, project-first sprints with weekly outcomes and constant feedback.",
+      "Every week is an outcome loop: daily AI-guided sprints, live or async mentor checkpoints, and a tangible artifact you publish. You plan on Monday, ship by the weekend, and use feedback/analytics to tighten your playbook for the next cycle.",
   },
   {
-    question: "What's the time commitment?",
-    answer: "6&ndash;12 weeks, 6&ndash;10 focused hours per week.",
+    question: "What&apos;s the realistic time commitment?",
+    answer:
+      "Expect 6&ndash;10 focused hours per week for 6&ndash;12 weeks. Most learners spend 45–60 minutes per day on sprints, then stack a longer session for project delivery. Optional advanced challenges, office hours, and partner events can add more time if you choose.",
   },
   {
-    question: "Is there a certificate?",
+    question: "Do I receive a certificate or credential when I finish?",
     answer:
-      "Yes &mdash; plus the more important part: your portfolio artifacts.",
+      "Yes&mdash;you earn a verified DOGM.AI credential tied to your shipped work. More important: you graduate with 3&ndash;5 portfolio artifacts, a public mastery narrative recruiters can verify, and continued access to the system for your next skill climb.",
   },
 ];
 
@@ -31,50 +32,55 @@ export default function FAQSection() {
   return (
     <AnimatedSection id="faq" className="border-t border-white/10 bg-ebony/95 py-20">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr]">
-          <div className="group relative overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/85 p-8 shadow-[0_20px_45px_rgba(0,0,0,0.65)]">
-            <div className="pointer-events-none absolute inset-px rounded-[2.25rem] border border-white/5 opacity-30 transition duration-300 group-hover:opacity-60" />
-            <div className="relative z-10 space-y-5">
+        <div className="space-y-8">
+          <div className="space-y-5">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-intl-orange">
+              FAQ · TRUST SIGNALS
+            </p>
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-intl-orange">
-                  FAQ · TRUST SIGNALS
-                </p>
-                <h2 className="mt-2 font-heading text-3xl font-extrabold text-white sm:text-4xl">
+                <h2 className="font-heading text-3xl font-extrabold text-white sm:text-4xl">
                   Everything Candidates Ask Before They Apply
                 </h2>
-                <p className="mt-3 text-sm text-slate-300">
-                  The DOGM.AI team responds to applicants within 24 hours. The FAQ
-                  covers the questions that keep Digital Professionals on the
-                  fence—time commitment, requirements, and what you actually ship.
+                <p className="mt-3 max-w-3xl text-sm text-slate-300">
+                  The DOGM.AI team responds within 24 hours. The FAQ below covers the questions that keep Digital Professionals on the fence—time commitment, requirements, and what you actually ship.
                 </p>
               </div>
-              <ul className="space-y-4 text-sm text-slate-300">
-                <li className="flex items-center gap-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-black/40 text-[11px] font-semibold text-intl-orange">
-                    01
-                  </span>
-                  Daily support from AI copilots + mentors.
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-black/40 text-[11px] font-semibold text-cerulean">
-                    02
-                  </span>
-                  Weekly outcomes that show up in your portfolio.
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-black/40 text-[11px] font-semibold text-allports">
-                    03
-                  </span>
-                  Mastery narrative that recruiters can verify.
-                </li>
-              </ul>
-              <div className="rounded-2xl border border-white/5 bg-black/50 p-4 text-sm text-slate-300">
-                Not seeing the question you have?{" "}
-                <a href="#contact" className="font-semibold text-intl-orange hover:text-orange-300">
-                  Talk to the team
-                </a>{" "}
-                and we&apos;ll send you an honest answer within a day.
-              </div>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-intl-orange px-5 py-2 text-xs font-semibold text-ebony shadow-[0_0_30px_rgba(250,84,4,0.45)] transition hover:-translate-y-0.5 hover:bg-orange-500"
+              >
+                Talk to the team &rarr;
+              </a>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {[
+                {
+                  label: "Daily Support",
+                  description: "AI copilots + mentors every day.",
+                  accent: "text-intl-orange",
+                },
+                {
+                  label: "Weekly Proof",
+                  description: "Outcome artifacts recruiters trust.",
+                  accent: "text-cerulean",
+                },
+                {
+                  label: "Verified Mastery",
+                  description: "Narratives that stand up in interviews.",
+                  accent: "text-allports",
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-white/5 bg-black/30 px-4 py-3 text-sm text-slate-300 shadow-[0_10px_25px_rgba(0,0,0,0.4)]"
+                >
+                  <p className={`text-[10px] uppercase tracking-[0.25em] ${item.accent}`}>
+                    {item.label}
+                  </p>
+                  <p className="mt-1">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
 
