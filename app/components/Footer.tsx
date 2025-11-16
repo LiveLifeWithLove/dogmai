@@ -16,8 +16,8 @@ export default function Footer() {
         </div>
         <nav className="flex w-full flex-wrap justify-center gap-6 text-xs text-slate-400">
           {[
-            { label: "Journey", href: "#journey" },
             { label: "Core System", href: "#system" },
+            { label: "Bootcamps", href: "#bootcamp" },
             { label: "Contact", href: "#contact" },
           ].map((link) => (
             <a
