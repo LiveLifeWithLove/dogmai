@@ -28,7 +28,7 @@ export default function HeroSection() {
 
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="#loop"
+              href="#system"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold text-ebony shadow-[0_0_40px_rgba(250,84,4,0.6)] transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-orange-500"
             >
               Explore the DOGM.AI System

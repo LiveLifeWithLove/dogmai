@@ -102,11 +102,9 @@ export default function OutcomesSection() {
               </p>
               <ul className="mt-3 space-y-3 text-xs text-slate-300">
                 {leaveWithItems.map((item) => (
-                  <li className="flex items-start gap-3" key={item.title}>
-                    <span className="mt-[2px] flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/40">
-                      <span
-                        className={`h-2.5 w-2.5 rounded-full ${item.color}`}
-                      />
+                  <li className="flex items-center gap-3" key={item.title}>
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/40">
+                      <span className={`h-2.5 w-2.5 rounded-full ${item.color}`} />
                     </span>
                     <span>
                       <span className="font-medium text-white">

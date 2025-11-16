@@ -134,9 +134,9 @@ function JourneyCardView({ card }: { card: JourneyCard }) {
       <p className="text-xs text-slate-300">{card.description}</p>
       <ul className="mt-2 space-y-2 text-xs text-slate-400">
         {card.bullets.map((bullet) => (
-          <li key={bullet} className="flex items-start gap-3 text-[11px]">
-            <span className="mt-[1px] flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-black/50">
-              <span className={`h-2 w-2 rounded-full ${card.bulletDotClass}`} />
+          <li key={bullet} className="flex items-center gap-3 text-[11px]">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/50">
+              <span className={`h-2.5 w-2.5 rounded-full ${card.bulletDotClass}`} />
             </span>
             <span>{bullet}</span>
           </li>

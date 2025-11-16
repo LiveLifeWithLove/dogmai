@@ -90,10 +90,10 @@ export default function BootcampStructure() {
                 {tier.bullets.map((bullet) => (
                   <li
                     key={bullet}
-                    className="flex items-start gap-3 text-[12px] text-slate-300"
+                    className="flex items-center gap-3 text-[12px] text-slate-300"
                   >
-                    <span className="mt-[2px] flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-black/40">
-                      <span className={`h-2 w-2 rounded-full ${tier.dotClass}`} />
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/40">
+                      <span className={`h-2.5 w-2.5 rounded-full ${tier.dotClass}`} />
                     </span>
                     <span className="text-slate-300">{bullet}</span>
                   </li>
