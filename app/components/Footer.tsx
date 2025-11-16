@@ -18,8 +18,6 @@ export default function Footer() {
           {[
             { label: "Journey", href: "#journey" },
             { label: "Core System", href: "#system" },
-            { label: "Mastery Journey", href: "#summary" },
-            { label: "Bootcamps", href: "#bootcamp" },
             { label: "Contact", href: "#contact" },
           ].map((link) => (
             <a
