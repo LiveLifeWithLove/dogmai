@@ -5,6 +5,7 @@ type Tier = {
   title: string;
   body: string;
   bullets: string[];
+  footer: string;
 };
 
 const tiers: Tier[] = [
@@ -14,7 +15,7 @@ const tiers: Tier[] = [
     dotClass: "bg-intl-orange",
     title: "Daily Learning Sprints",
     body:
-      "Daily sprints mix focused reps, AI prompts, and shippable micro-deliverables so Digital Professionals build unstoppable momentum.",
+      "Short, focused execution blocks designed for momentum.",
     bullets: [
       "30-45 minute sprint work",
       "AI-guided planning & task breakdowns",
@@ -22,14 +23,14 @@ const tiers: Tier[] = [
       "Optional mentor check-ins",
       "Reflection prompts for improvement",
     ],
+    footer: "Daily structure -> daily progress -> daily proof.",
   },
   {
     label: "Weekly Structure",
     labelClass: "text-cerulean",
     dotClass: "bg-cerulean",
     title: "Weekly Outcome Cycles",
-    body:
-      "Each week culminates in a portfolio artifact critiqued by AI and mentors so every Digital Professional revision has a purpose.",
+    body: "Every week ends with something you can ship.",
     bullets: [
       "Weekly milestone project",
       "AI-supported research & prototyping",
@@ -37,14 +38,14 @@ const tiers: Tier[] = [
       "Upload to your project portfolio",
       "Progress dashboard & growth indicators",
     ],
+    footer: "You don&apos;t just learn - you produce.",
   },
   {
     label: "Monthly Structure",
     labelClass: "text-allports",
     dotClass: "bg-allports",
     title: "Monthly Mastery Milestones",
-    body:
-      "Monthly checkpoints benchmark your move from explorer &rarr; practitioner &rarr; AI-native digital leader.",
+    body: "Repetition becomes intuition.",
     bullets: [
       "Full project evaluation",
       "AI-assisted mastery assessment",
@@ -52,6 +53,7 @@ const tiers: Tier[] = [
       "Optional advanced challenges",
       "Monthly mastery badge & portfolio update",
     ],
+    footer: "Each month marks a visible leap forward.",
   },
 ];
 
@@ -60,15 +62,12 @@ export default function BootcampStructure() {
     <section className="border-b border-white/5 bg-black/60 py-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
             How the Bootcamp Works
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-300">
-            DOGM.AI bootcamps marry disciplined structure, measurable work, and
-            AI-guided iteration so Digital Professionals can ship on demand.
-            Here&apos;s how the daily, weekly, and monthly cycles stack to build
-            an AI-native Digital Professional.
           </p>
+          <h2 className="mt-2 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            Daily Discipline. Weekly Outcomes. Monthly Mastery.
+          </h2>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
@@ -99,6 +98,9 @@ export default function BootcampStructure() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                {tier.footer}
+              </p>
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
 const stats = [
-  { value: "80%+", label: "Ship capstone projects", color: "text-intl-orange" },
+  { value: "80%+", label: "Ship their capstone", color: "text-intl-orange" },
   { value: "10-20h", label: "Weekly AI work", color: "text-cerulean" },
   { value: "3-5", label: "Portfolio artifacts", color: "text-allports" },
 ];
@@ -7,27 +7,24 @@ const stats = [
 const leaveWithItems = [
   {
     color: "bg-intl-orange",
-    title: "A concrete portfolio:",
+    title: "A concrete portfolio",
     description:
-      "apps, case studies, dashboards, or workflows that prove the reps happened and strengthen Digital Professional.",
+      "Apps, case studies, dashboards, or workflows recruiters and clients can trust.",
   },
   {
     color: "bg-cerulean",
-    title: "AI-native workflows:",
-    description:
-      "playbooks, automations, and rituals that plug directly into day one at work.",
+    title: "AI-native workflows",
+    description: "Playbooks you can apply Day 1 in any job.",
   },
   {
     color: "bg-allports",
-    title: "A compelling narrative:",
-    description:
-      "a narrative rooted in proof of work, not theoretical credentials, so Digital Professionals stand out in search and interviews.",
+    title: "A compelling narrative",
+    description: "Proof-of-work stories rooted in shipped outcomes.",
   },
   {
     color: "bg-intl-orange",
-    title: "A repeatable system:",
-    description:
-      "the DOGM.AI Loop &mdash; your repeatable system for the next skills you choose to learn.",
+    title: "A repeatable system",
+    description: "The DOGM.AI Loop for every new skill you want to master.",
   },
 ];
 
@@ -36,21 +33,21 @@ const outcomeTracks = [
     number: "1",
     title: "Career & role shifts",
     description:
-      "Shift into product, design, development, data, or Digital Professional leadership with artifacts that show exactly how you work.",
+      "Move into product, design, data, or Digital Professional leadership with artifacts that show exactly how you work.",
     color: "bg-intl-orange/15 text-intl-orange",
   },
   {
     number: "2",
     title: "Stronger in-role performance",
     description:
-      "Become the AI-native Digital Professional on your team &mdash; faster, clearer, more reliable.",
+      "Become the AI-native professional on your team &mdash; faster, clearer, more reliable.",
     color: "bg-cerulean/15 text-cerulean",
   },
   {
     number: "3",
     title: "Founder & side-project leverage",
     description:
-      "Validate ideas, prototype quickly, and launch efficiently with AI as your multiplier.",
+      "Prototype faster, validate smarter, launch more often.",
     color: "bg-allports/15 text-allports",
   },
 ];
@@ -64,16 +61,22 @@ export default function OutcomesSection() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col gap-6 pb-10 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-              Outcomes &amp; Transformations
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
+              Outcomes
+            </p>
+            <h2 className="mt-1 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+              Outcomes That Recruiters and Clients Trust
             </h2>
             <p className="mt-3 max-w-xl text-sm text-slate-300">
               DOGM.AI is built on evidence, not theory. Digital Professionals
-              leave with shipped work, upgraded workflows, and a story they can
-              defend in search results, sales calls, and interviews.
+              leave with shipped work, AI-native workflows, and a narrative they
+              can defend in search results, sales calls, and interviews.
             </p>
           </div>
           <div className="w-full max-w-sm md:text-right">
+            <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+              Stats That Matter
+            </div>
             <div className="grid grid-cols-3 gap-3 text-center text-[11px] text-slate-300">
               {stats.map((stat) => (
                 <div
@@ -98,7 +101,7 @@ export default function OutcomesSection() {
           <div className="space-y-5">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-400">
-                After 6&ndash;12 weeks, you leave with:
+                What You&apos;ll Leave With
               </p>
               <ul className="mt-3 space-y-3 text-xs text-slate-300">
                 {leaveWithItems.map((item) => (
@@ -110,11 +113,7 @@ export default function OutcomesSection() {
                       <span className="font-medium text-white">
                         {item.title}
                       </span>{" "}
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: item.description,
-                        }}
-                      />
+                      <span>{item.description}</span>
                     </span>
                   </li>
                 ))}
@@ -125,7 +124,7 @@ export default function OutcomesSection() {
               <p className="font-semibold text-white">
                 &ldquo;Before DOGM.AI I poked at AI tools. After the bootcamp I
                 had a workflow, a bar to measure against, and a live project
-                clients could trust.&rdquo;
+                clients trusted.&rdquo;
               </p>
               <p className="mt-3 text-[11px] text-slate-400">
                 &mdash; Web Dev Cohort Learner
@@ -135,9 +134,9 @@ export default function OutcomesSection() {
 
           <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-ebony to-black/40 p-5 text-xs text-slate-300 shadow-[0_18px_45px_rgba(0,0,0,0.85)]">
             <div className="mb-3 flex items-center justify-between text-[11px] text-slate-400">
-              <span>Outcome Tracks</span>
+              <span>Where This Takes You</span>
               <span className="rounded-full bg-black/60 px-2 py-0.5 text-[10px] uppercase tracking-[0.16em]">
-                Where this takes you
+                Career Outcomes
               </span>
             </div>
 
@@ -170,9 +169,8 @@ export default function OutcomesSection() {
                 TL;DR
               </span>
               <p className="mt-2">
-                DOGM.AI isn&apos;t about &ldquo;learning AI tools.&rdquo; It&apos;s
-                about becoming the Digital Professional who can learn, build,
-                and adapt on demand.
+                Become the Digital Professional who can learn, build, and adapt
+                on demand.
               </p>
             </div>
           </div>

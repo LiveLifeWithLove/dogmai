@@ -50,21 +50,24 @@ export default function CoreSystemSection() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              The DOGM.AI Core System
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
+              What DOGM.AI Actually Is
+            </p>
+            <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+              Accelerate Mastery. Learn With AI. Build Proof.
             </h2>
             <p className="mt-4 max-w-xl text-sm text-slate-300">
-              The DOGM.AI Loop is the operating rhythm built for Digital
-              Professionals: Discipline &rarr; Outcomes &rarr; Growth &rarr;
-              Mastery &rarr; Acceleration &rarr; Intelligence. Each state
-              compounds the last so structure becomes evidence and evidence
-              becomes leverage.
+              DOGM.AI is not a course. It&apos;s a structured operating system
+              that turns daily discipline into shipped work, measurable growth,
+              and a portfolio that proves how you think and build.
             </p>
             <p className="mt-4 max-w-xl text-sm text-slate-300">
-              Under the hood, AI sets the pace &mdash; planning, reviewing, and
-              surfacing the next constraint &mdash; while you do the reps. It
-              keeps you honest, accelerates critique, and lines up the next
-              challenge so practice stays intentional and portfolios stay fresh.
+              AI guides your planning, feedback, and iteration &mdash; but you
+              do the reps. Every sprint is intentional, every artifact is proof,
+              and every loop compounds your edge.
+            </p>
+            <p className="mt-4 max-w-xl text-sm font-semibold text-slate-100">
+              This is how Digital Professionals learn in 2026.
             </p>
 
             <div className="mt-6 grid gap-3 text-xs text-slate-300 sm:grid-cols-3">

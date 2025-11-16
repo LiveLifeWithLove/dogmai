@@ -1,24 +1,24 @@
 const accelerators = [
   {
-    label: "Reduce Friction",
+    label: "Remove Drag",
     dotClass: "bg-intl-orange",
-    title: "No More Getting Stuck",
+    title: "No more getting stuck.",
     description:
-      "The AI Co-Pilot clears blockers instantly &mdash; debugging, rewriting, testing, analyzing, or clarifying requirements &mdash; so Digital Professionals stay in creation mode.",
+      "The AI Co-Pilot clears blockers instantly &mdash; debugging, rewriting, researching, analyzing, or clarifying requirements.",
   },
   {
-    label: "Shorten Feedback Loops",
+    label: "Collapse Feedback Loops",
     dotClass: "bg-cerulean",
-    title: "Improve 5X Faster",
+    title: "Improve 5x faster.",
     description:
-      "Feedback arrives on demand: structural critiques, strategy notes, and clarity fixes delivered the moment you ask. Shorter loops mean faster mastery for every Digital Professional.",
+      "Get critique, structure, and direction the moment you need it so every iteration compounds.",
   },
   {
-    label: "Boost Leverage",
+    label: "Increase Leverage",
     dotClass: "bg-allports",
-    title: "Do More With the Same Hours",
+    title: "Do more with the same hours.",
     description:
-      "Research, drafts, prototypes, and analysis accelerate so you can spend your hours on judgment, iteration, and impact that clients can search and trust.",
+      "AI speeds research, drafts, prototypes, and analysis so you can spend time on judgment and iteration.",
   },
 ];
 
@@ -30,15 +30,17 @@ export default function AccelerationSection() {
     >
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            How the AI Co-Pilot Accelerates Digital Professionals
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
+            The AI Co-Pilot Advantage
+          </p>
+          <h2 className="mt-2 font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            AI Isn&apos;t the Shortcut - It&apos;s the Multiplier
           </h2>
           <p className="mt-3 text-sm text-slate-300">
-            Acceleration isn&apos;t about working faster&mdash;it&apos;s about
-            removing drag, focusing attention, and shrinking the gap between
-            idea and output so Digital Professionals lead every sprint. The AI
-            Co-Pilot keeps you learning, building, and iterating at a pace that
-            used to take months.
+            Acceleration isn&apos;t about working faster&mdash;it&apos;s about removing
+            drag, tightening feedback loops, and shrinking the gap between idea
+            and output. The AI Co-Pilot keeps you learning, building, and
+            iterating at a pace that used to take months.
           </p>
         </div>
 
@@ -65,9 +67,9 @@ export default function AccelerationSection() {
 
         <div className="mx-auto mt-14 max-w-3xl text-center">
           <p className="text-sm text-slate-300 leading-relaxed">
-            AI doesn&apos;t replace the work&mdash;it amplifies your ability to
-            do the work that matters as a Digital Professional. Remove friction,
-            collapse feedback loops, and let leverage compound.
+            AI doesn&apos;t replace the work&mdash;it amplifies your ability to do
+            the work that matters as a Digital Professional. The result:
+            accelerated mastery in weeks, not months.
           </p>
         </div>
       </div>

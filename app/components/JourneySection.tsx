@@ -155,15 +155,21 @@ export default function JourneySection() {
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-start justify-between gap-6 pb-10 md:flex-row md:items-end">
           <div>
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              The DOGM.AI Journey
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">
+              Why It Works
+            </p>
+            <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+              The DOGM.AI Loop
             </h2>
             <p className="mt-3 max-w-xl text-sm text-slate-300">
-              Discipline &rarr; Outcomes &rarr; Growth &rarr; Mastery &rarr;
-              Acceleration &rarr; Intelligence.
-              <br />
-              One operating system that turns structured effort into confident,
-              AI-native execution for Digital Professionals.
+              A repeatable system that compounds skill every week: Discipline
+              &rarr; Outcomes &rarr; Growth &rarr; Mastery &rarr; Acceleration
+              &rarr; Intelligence. Each stage builds on the last so practice
+              becomes proof and proof becomes leverage.
+            </p>
+            <p className="mt-2 max-w-xl text-sm text-slate-300">
+              This loop becomes the backbone of your career &mdash; a system you
+              can reuse for any skill, field, or project.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-[11px] text-slate-400">
