@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="relative h-full w-full">
           <Image
-            src="/hero-image.png"
+            src="/hero-image.webp"
             alt=""
             fill
             priority
