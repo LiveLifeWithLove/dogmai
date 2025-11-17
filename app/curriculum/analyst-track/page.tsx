@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const heroStats = [
-  { label: "Next Cohort", value: "March", detail: "45 seats" },
+  { label: "Next Cohort", value: "March", detail: "50 seats" },
   { label: "Duration", value: "10 weeks", detail: "Mission-intelligence sprint" },
   { label: "Output cadence", value: "Weekly", detail: "Deployable signal reports" },
 ];
@@ -134,7 +134,7 @@ export default function AnalystTrackPage() {
             <div className="relative space-y-6">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Mission-Control Analyst Track</p>
               <h1 className="font-heading text-4xl font-extrabold text-white sm:text-5xl">AI-Native Mission Intelligence for Deployment</h1>
-              <p className="text-sm text-slate-300">Next Cohort: March · 45 Seats</p>
+              <p className="text-sm text-slate-300">Next Cohort: March · 50 Seats</p>
               <p className="text-base text-slate-200">
                 Turn raw telemetry into decisions. Learn how to orchestrate AI copilots, automations, and civic data stacks so agencies always have the signal they need.
               </p>
