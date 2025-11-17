@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import SampleProjectsSection, { type SampleProject } from "./SampleProjectsSection";
 
 export const metadata: Metadata = {
   title: "Mission-Control Builder Track | DOGM.AI",
@@ -84,6 +85,47 @@ const aiAdvantages = [
   {
     title: "Increase Leverage",
     detail: "AI covers boilerplate so you stay focused on judgment calls.",
+  },
+];
+
+const createProjectImage = (label: string, colorA: string, colorB: string) => {
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='640' height='360' viewBox='0 0 640 360'><defs><linearGradient id='grad-${label}' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='${colorA}' stop-opacity='0.9'/><stop offset='100%' stop-color='${colorB}' stop-opacity='0.9'/></linearGradient></defs><rect width='640' height='360' rx='28' fill='url(#grad-${label})'/><g fill='rgba(255,255,255,0.35)' transform='translate(40,60)'><rect width='480' height='12' rx='6'/><rect y='32' width='360' height='12' rx='6'/><rect y='64' width='520' height='140' rx='18'/><rect y='220' width='140' height='60' rx='12'/><rect x='160' y='220' width='140' height='60' rx='12'/><rect x='320' y='220' width='140' height='60' rx='12'/></g><text x='40' y='330' fill='rgba(255,255,255,0.7)' font-family='Arial' font-size='24' letter-spacing='2'>${label}</text></svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+};
+
+const sampleProjects: SampleProject[] = [
+  {
+    title: "LGU Mission Console",
+    description:
+      "Responsive command interface showing alerts, geo-tagged incidents, and AI-generated situation briefs for municipal operators.",
+    images: [
+      createProjectImage("LGU Console", "#fa5404", "#f97316"),
+      createProjectImage("Operator Timeline", "#f97316", "#facc15"),
+    ],
+    highlights: ["Multi-source incident ingestion", "AI summaries for operators", "Role-based view states"],
+    impact: ["Reduces incident coordination time by 60%", "Gives command centers real-time situational clarity"],
+  },
+  {
+    title: "Citizen Signal Intelligence",
+    description:
+      "Pipeline that turns SMS/email complaints into prioritized tickets, enriched with AI classification and routing automations.",
+    images: [
+      createProjectImage("Signal Intelligence", "#0ea5e9", "#22d3ee"),
+      createProjectImage("Ticket Routing", "#22d3ee", "#2dd4bf"),
+    ],
+    highlights: ["Natural language intake", "Automated routing logic", "Analytics-ready reporting"],
+    impact: ["Keeps agencies ahead of citizen escalations", "Transforms raw complaints into action-ready cues"],
+  },
+  {
+    title: "Field Ops Mobility Kit",
+    description:
+      "Offline-ready mobile workspace with photo uploads, AI transcription, and push sync to the national mission-control stack.",
+    images: [
+      createProjectImage("Field Mobility", "#6366f1", "#a855f7"),
+      createProjectImage("Sync Hub", "#a855f7", "#ec4899"),
+    ],
+    highlights: ["Offline-first capture", "Gov-approved data handling", "AI-assisted documentation"],
+    impact: ["Eliminates reporting lag for field teams", "Feeds the national system with structured updates"],
   },
 ];
 
@@ -206,7 +248,7 @@ export default function BuilderTrackPage() {
                   {[
                     "Mission-control base app (Next.js + Tailwind)",
                     "Operator / Analyst / Admin auth",
-                    "API integration stubs for Aira systems",
+                    "API integration stubs for mission-control services",
                     "Real-time logging + telemetry",
                     "Readiness scorecard + friction map",
                   ].map((item) => (
@@ -261,6 +303,8 @@ export default function BuilderTrackPage() {
               </div>
             </div>
           </section>
+
+          <SampleProjectsSection projects={sampleProjects} />
 
           <section className="rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <h2 className="text-3xl font-bold text-white">What Graduates Leave With</h2>
