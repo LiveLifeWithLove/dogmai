@@ -139,6 +139,7 @@ export const bootcampPrograms: BootcampProgram[] = [
       "Turn raw data into intelligence with Python, analytics, and applied AI. Solve real business problems and synthesize insights stakeholders trust.",
     buttonText: "Check Curriculum",
     buttonClass: "bg-gradient-to-r from-allports to-cerulean text-ebony",
+    buttonHref: "/curriculum/analyst-track",
     tags: [
       "Python-first workflows",
       "AI-assisted analysis",
@@ -186,6 +187,7 @@ export const bootcampPrograms: BootcampProgram[] = [
       "Master modern Digital Professional workflows: automation, analysis, content, delivery, and high-quality execution using AI as your teammate.",
     buttonText: "Review Curriculum",
     buttonClass: "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
+    buttonHref: "/curriculum/execution-track",
     tags: [
       "Automation architect",
       "AI productivity ops",

@@ -21,11 +21,12 @@ export default function AnimatedSection({
   className = '',
   ...rest
 }: AnimatedSectionProps) {
+  const combinedClassName = ['scroll-mt-28', className].filter(Boolean).join(' ');
   const useViewport = trigger === 'view';
 
   return (
     <motion.section
-      className={className}
+      className={combinedClassName}
       initial="hidden"
       {...(useViewport
         ? {

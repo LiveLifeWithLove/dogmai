@@ -215,7 +215,6 @@ export default function ApplyPage() {
               </div>
             </section>
         </main>
-
         <Footer />
       </div>
     </div>

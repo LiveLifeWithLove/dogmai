@@ -10,7 +10,7 @@ export default function ReadinessGuide() {
     },
     {
       title: "Proof, not pressure",
-      detail: "You share the first artifact when you feel confident�we review it together and only then move into the core loop.",
+      detail: "You share the first artifact when you feel confident—we review it together and only then move into the core loop.",
     },
   ];
 
