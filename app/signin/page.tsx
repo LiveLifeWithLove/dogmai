@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 const stats = [
@@ -16,7 +16,7 @@ const commitments = [
 const providers = [{ label: "Continue with Google", icon: "G" }];
 
 export const metadata: Metadata = {
-  title: "Sign in — DOGM.AI",
+  title: "Sign in - DOGM.AI",
   description: "Access your DOGM.AI command center to keep your mastery reps on track.",
 };
 
@@ -52,7 +52,7 @@ export default function SignInPage() {
               Back home
             </Link>
             <Link
-              href="/#apply"
+              href="/apply"
               className="rounded-full bg-intl-orange px-4 py-2 font-semibold text-ebony shadow-[0_0_30px_rgba(250,84,4,0.55)] transition hover:-translate-y-0.5 hover:bg-orange-500"
             >
               Apply
@@ -114,7 +114,7 @@ export default function SignInPage() {
                 <span className="text-slate-200">Password</span>
                 <input
                   type="password"
-                  placeholder="••••••••"
+                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
                   className="w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-intl-orange focus:outline-none focus:ring-2 focus:ring-intl-orange/40"
                 />
               </label>
@@ -155,7 +155,7 @@ export default function SignInPage() {
             </div>
             <p className="mt-6 text-center text-xs text-slate-400">
               Don&apos;t have an account?{" "}
-              <a href="/#apply" className="font-semibold text-intl-orange hover:text-orange-400">
+              <a href="/apply" className="font-semibold text-intl-orange hover:text-orange-400">
                 Request an invitation
               </a>
             </p>
@@ -165,3 +165,5 @@ export default function SignInPage() {
     </div>
   );
 }
+
+
