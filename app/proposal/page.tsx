@@ -285,7 +285,7 @@ export default function ProposalPage() {
                     so Aira Labs can operationalize the system across agencies.
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center justify-end gap-4 text-right">
+                <div className="flex flex-col items-center gap-3 text-center md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-4 md:text-right">
                   <a
                     href="mailto:team@dogm.ai"
                     className="inline-flex items-center justify-center rounded-full bg-intl-orange px-6 py-3 font-semibold text-white shadow-lg shadow-intl-orange/40 transition hover:-translate-y-0.5 hover:bg-orange-500 whitespace-nowrap"
