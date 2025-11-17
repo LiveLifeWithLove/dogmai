@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, MouseEvent, useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 
 const tags = [
@@ -118,9 +121,30 @@ const journeyCards: JourneyCard[] = [
   },
 ];
 
-function JourneyCardView({ card }: { card: JourneyCard }) {
+const glowColors: Record<string, string> = {
+  "01 | Discipline": "rgba(250,84,4,0.5)",
+  "02 | Outcomes": "rgba(4,183,236,0.5)",
+  "03 | Growth": "rgba(4,113,159,0.45)",
+  "04 | Mastery": "rgba(250,84,4,0.45)",
+  "05 | Acceleration": "rgba(4,183,236,0.45)",
+  "06 | Intelligence": "rgba(4,113,159,0.45)",
+};
+
+function JourneyCardView({
+  card,
+  onHover,
+  onLeave,
+}: {
+  card: JourneyCard;
+  onHover: (rect: DOMRect) => void;
+  onLeave: () => void;
+}) {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 p-5 shadow-[0_18px_35px_rgba(0,0,0,0.65)]">
+    <article
+      className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-b from-slate-900/70 to-black/80 p-5 shadow-[0_18px_35px_rgba(0,0,0,0.65)]"
+      onMouseEnter={(event) => onHover(event.currentTarget.getBoundingClientRect())}
+      onMouseLeave={onLeave}
+    >
       <div className="absolute inset-px rounded-[22px] border border-white/5 opacity-40 transition duration-300 group-hover:opacity-70" />
       <div className="relative z-10 flex flex-1 flex-col gap-4">
         <div className="flex items-center justify-between text-xs text-slate-400">
@@ -155,14 +179,69 @@ function JourneyCardView({ card }: { card: JourneyCard }) {
 }
 
 export default function JourneySection() {
+  const [parallaxOffset, setParallaxOffset] = useState({ x: 0, y: 0 });
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const [hoverPosition, setHoverPosition] = useState({ x: 50, y: 50 });
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
+    const { left, top, width, height } = event.currentTarget.getBoundingClientRect();
+    const offsetX = ((event.clientX - left) / width - 0.5) * 20;
+    const offsetY = ((event.clientY - top) / height - 0.5) * 20;
+    setParallaxOffset({ x: offsetX, y: offsetY });
+  };
+
+  const handleCardHover = (cardId: string, rect: DOMRect) => {
+    const containerRect = overlayRef.current?.getBoundingClientRect();
+    if (containerRect) {
+      const x =
+        ((rect.left + rect.width / 2 - containerRect.left) / containerRect.width) * 100;
+      const y =
+        ((rect.top + rect.height / 2 - containerRect.top) / containerRect.height) * 100;
+      setHoverPosition({ x, y });
+    }
+    setHoveredCard(cardId);
+  };
+
+  const handleCardLeave = () => setHoveredCard(null);
+
   return (
     <AnimatedSection
       id="journey"
       className="relative overflow-hidden border-b border-white/5 bg-ebony/80 py-16"
+      onMouseMove={handleMouseMove}
     >
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-intl-orange/30 to-transparent" />
-        <div className="absolute inset-x-0 top-2/3 h-px bg-gradient-to-r from-transparent via-cerulean/25 to-transparent" />
+      <div ref={overlayRef} className="pointer-events-none absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-60"
+          style={{
+            transform: `translate(${parallaxOffset.x}px, ${parallaxOffset.y}px)`,
+            transition: "transform 0.1s ease-out",
+            backgroundImage: hoveredCard
+              ? "radial-gradient(circle at center, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 60%), radial-gradient(circle at center, rgba(255,255,255,0.08) 20%, transparent 65%)"
+              : "radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 60%), radial-gradient(circle at center, rgba(255,255,255,0.02) 20%, transparent 70%)",
+            filter: hoveredCard ? "saturate(1.5)" : "none",
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-70"
+          style={{
+            transform: `translate(${parallaxOffset.x}px, ${parallaxOffset.y}px)`,
+            transition: "transform 0.1s ease-out",
+            backgroundImage:
+              "repeating-radial-gradient(circle at center, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 36px)",
+          }}
+        />
+        {hoveredCard && (
+          <div
+            className="absolute h-64 w-64 rounded-full blur-3xl transition-all duration-300"
+            style={{
+              background: glowColors[hoveredCard] ?? "rgba(255,255,255,0.25)",
+              left: `calc(${hoverPosition.x}% - 8rem)`,
+              top: `calc(${hoverPosition.y}% - 8rem)`,
+            }}
+          />
+        )}
       </div>
       <div className="relative mx-auto max-w-6xl px-4">
         <div className="flex flex-col items-start justify-between gap-6 pb-10 md:flex-row md:items-end">
@@ -198,15 +277,27 @@ export default function JourneySection() {
 
         <div className="grid auto-rows-fr gap-5 md:grid-cols-3">
           {journeyCards.slice(0, 3).map((card) => (
-            <JourneyCardView key={card.id} card={card} />
+            <JourneyCardView
+              key={card.id}
+              card={card}
+              onHover={(rect) => handleCardHover(card.id, rect)}
+              onLeave={handleCardLeave}
+            />
           ))}
         </div>
         <div className="mt-6 grid auto-rows-fr gap-5 md:grid-cols-3">
           {journeyCards.slice(3).map((card) => (
-            <JourneyCardView key={card.id} card={card} />
+            <JourneyCardView
+              key={card.id}
+              card={card}
+              onHover={(rect) => handleCardHover(card.id, rect)}
+              onLeave={handleCardLeave}
+            />
           ))}
         </div>
       </div>
     </AnimatedSection>
   );
 }
+
+
