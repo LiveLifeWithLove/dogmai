@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Roboto, Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
         {children}
+        <GoogleAnalytics gaId="G-VW00E9B53J" />
       </body>
     </html>
   );
