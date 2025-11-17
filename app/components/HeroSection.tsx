@@ -101,8 +101,9 @@ export default function HeroSection() {
             </p>
             <ul className="mt-2 space-y-2 text-xs text-slate-300">
               <li>• Builders: launch AI-native products faster.</li>
-              <li>• Designers: craft intelligent interfaces with proof.</li>
-              <li>• Analysts & operators: architect automations + insights.</li>
+              <li>• Designers: craft intelligent, adaptive interfaces.</li>
+              <li>• Analysts: turn data into automated insights.</li>
+              <li>• Operators: streamline workflows and execution.</li>
             </ul>
           </div>
         </div>

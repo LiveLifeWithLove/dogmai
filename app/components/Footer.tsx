@@ -10,7 +10,7 @@ export default function Footer() {
           </div>
           <div className="mt-2 text-center">
             <div className="whitespace-nowrap font-heading text-xs font-semibold tracking-wide text-slate-200 sm:text-sm">
-              Accelerate Mastery. Learn with AI.
+              Accelerate Mastery. Learn With AI. Build Proof.
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "DOGM.AI - Accelerate Mastery. Learn with AI.",
+  title: "DOGM.AI - Accelerate Mastery. Learn With AI. Build Proof.",
   description: "Guided AI bootcamps to accelerate mastery.",
 };
 
