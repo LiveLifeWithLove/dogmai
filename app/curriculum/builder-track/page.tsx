@@ -132,14 +132,14 @@ const sampleProjects: SampleProject[] = [
 export default function BuilderTrackPage() {
   return (
     <div className="min-h-screen bg-ebony text-slate-100">
+      <Header />
       <div className="relative min-h-screen overflow-hidden">
         <div className="pointer-events-none fixed inset-0 -z-10">
           <div className="absolute -top-20 left-10 h-64 w-64 rounded-full bg-intl-orange/20 blur-3xl" />
           <div className="absolute top-32 right-0 h-96 w-96 rounded-full bg-cerulean/15 blur-3xl" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.08),transparent_55%)]" />
         </div>
-        <Header />
-        <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 py-16">
+        <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-16 pt-10">
           <section className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-slate-950/80 to-black/85 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
             <div className="pointer-events-none absolute inset-0">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_60%)]" />

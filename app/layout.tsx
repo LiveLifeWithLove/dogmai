@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Roboto, Poppins } from "next/font/google";
 import "./globals.css";
+import BackToTopButton from "./components/BackToTopButton";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "DOGM.AI - Accelerate Mastery",
+  title: "DOGM.AI - Accelerate Mastery. Learn with AI.",
   description: "Guided AI bootcamps to accelerate mastery.",
 };
 
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
         {children}
+        <BackToTopButton />
         <GoogleAnalytics gaId="G-VW00E9B53J" />
       </body>
     </html>

@@ -41,6 +41,7 @@ export const metadata: Metadata = {
 export default function ApplyPage() {
   return (
     <div className="min-h-screen bg-ebony text-slate-100">
+      <Header />
       <div className="relative min-h-screen overflow-hidden">
         <div className="pointer-events-none fixed inset-0 -z-10">
           <div className="absolute -top-36 left-1/3 h-80 w-80 rounded-full bg-intl-orange/10 blur-3xl" />
@@ -48,11 +49,8 @@ export default function ApplyPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]" />
         </div>
 
-        <div className="relative z-10 flex min-h-screen flex-col">
-          <Header />
-
-          <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-4 py-16">
-            <section className="relative grid gap-8 overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-slate-950/80 to-black/85 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)] lg:grid-cols-[1.2fr_0.8fr]">
+        <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-4 pb-16 pt-6">
+          <section className="relative grid gap-8 overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-slate-950/80 to-black/85 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)] lg:grid-cols-[1.2fr_0.8fr]">
               <div className="pointer-events-none absolute inset-0">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_60%)]" />
                 <div className="absolute -right-8 top-0 h-48 w-48 rounded-full bg-intl-orange/25 blur-3xl" />
@@ -216,10 +214,9 @@ export default function ApplyPage() {
                 </div>
               </div>
             </section>
-          </main>
+        </main>
 
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );

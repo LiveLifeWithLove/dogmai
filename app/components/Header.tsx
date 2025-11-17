@@ -8,7 +8,7 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-30 border-b border-white/5 bg-ebony/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/5 bg-ebony/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <div className="flex items-center py-2">
           <Link
