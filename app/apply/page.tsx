@@ -52,8 +52,12 @@ export default function ApplyPage() {
           <Header />
 
           <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-16 px-4 py-16">
-            <section className="grid gap-8 rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)] lg:grid-cols-[1.2fr_0.8fr]">
-              <div className="space-y-6">
+            <section className="relative grid gap-8 overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-slate-950/80 to-black/85 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)] lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="pointer-events-none absolute inset-0">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_60%)]" />
+                <div className="absolute -right-8 top-0 h-48 w-48 rounded-full bg-intl-orange/25 blur-3xl" />
+              </div>
+              <div className="relative space-y-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Now accepting candidates</p>
                 <h1 className="font-heading text-4xl font-extrabold text-white sm:text-5xl">
                   Apply to the DOGM.AI mastery bootcamps.
@@ -95,7 +99,7 @@ export default function ApplyPage() {
                 </div>
               </div>
 
-              <div className="space-y-6 rounded-[28px] border border-white/10 bg-gradient-to-b from-slate-950/80 to-black/90 p-8">
+              <div className="relative space-y-6 rounded-[28px] border border-white/10 bg-gradient-to-b from-slate-950/80 to-black/90 p-8">
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-cerulean">Signals we review</p>
                   <h2 className="mt-3 text-2xl font-semibold text-white">How you plan, ship, and learn.</h2>
@@ -122,7 +126,7 @@ export default function ApplyPage() {
               </div>
             </section>
 
-            <section className="rounded-[32px] border border-white/10 bg-black/50 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.6)]">
+            <section className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-slate-950/75 to-black/80 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.6)]">
               <div className="mb-8 space-y-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cerulean">How it works</p>
                 <h2 className="font-heading text-3xl font-bold text-white">Three steps to enter the next cohort.</h2>
@@ -138,7 +142,7 @@ export default function ApplyPage() {
               </div>
             </section>
 
-            <section className="rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
+            <section className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-black/75 to-slate-950/70 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
               <div className="mb-8 space-y-3 text-center">
                 <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Pick your starter lane</p>
                 <h2 className="font-heading text-3xl font-bold text-white">Four beginner-friendly tracks powered by our bootcamps.</h2>
@@ -188,7 +192,7 @@ export default function ApplyPage() {
               </p>
             </section>
 
-            <section className="rounded-[32px] border border-white/10 bg-black/70 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
+            <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-black/80 via-slate-950/70 to-black/75 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
               <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
                 <div className="space-y-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cerulean">Application form</p>
