@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -23,24 +22,19 @@ export const metadata: Metadata = {
 
 export default function SignInPage() {
   return (
-    <div className="relative min-h-screen bg-ebony text-slate-100">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-        <div className="relative h-full w-full">
-          <Image
-            src="/flare-bg.png"
-            alt="DOGM.AI flare background"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-70 blur-[1px] sm:object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-ebony/40 via-ebony/80 to-ebony" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_-5%,rgba(250,84,4,0.35),transparent_45%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_-10%,rgba(4,183,236,0.35),transparent_45%)]" />
-        </div>
-      </div>
+    <div
+      className="relative min-h-screen overflow-hidden bg-ebony text-slate-100"
+      style={{
+        backgroundImage: "url(/flare-bg.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ebony/30 via-ebony/70 to-ebony" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_-5%,rgba(250,84,4,0.45),transparent_45%)]" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_85%_-10%,rgba(4,183,236,0.45),transparent_45%)]" aria-hidden="true" />
 
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative z-10 flex min-h-screen flex-col">
         <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-6 text-sm text-slate-200">
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-12 w-32 items-center justify-center rounded-xl border border-white/15 bg-white/10 text-base font-semibold tracking-[0.3em] text-white">
