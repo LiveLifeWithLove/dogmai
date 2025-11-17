@@ -287,13 +287,13 @@ export default function ProposalPage() {
                 </div>
                 <div className="flex flex-col items-center gap-3 text-center md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-4 md:text-right">
                   <a
-                    href="mailto:team@dogm.ai"
+                    href="mailto:hello@dogm.ai"
                     className="inline-flex items-center justify-center rounded-full bg-intl-orange px-6 py-3 font-semibold text-white shadow-lg shadow-intl-orange/40 transition hover:-translate-y-0.5 hover:bg-orange-500 whitespace-nowrap"
                   >
                     Schedule Alignment Workshop
                   </a>
                   <p className="text-xs uppercase tracking-[0.35em] text-slate-600">
-                    Contact - team@dogm.ai
+                    Contact - hello@dogm.ai
                   </p>
                 </div>
               </div>
