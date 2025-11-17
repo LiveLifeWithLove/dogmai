@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const heroStats = [
-  { label: "Next Cohort", value: "March", detail: "20 seats" },
+  { label: "Next Cohort", value: "March", detail: "50 seats" },
   { label: "Duration", value: "12 weeks", detail: "Mission-control sprint" },
   { label: "Proof cadence", value: "Weekly", detail: "Deployable artifacts" },
 ];
@@ -140,72 +140,84 @@ export default function BuilderTrackPage() {
         </div>
         <Header />
         <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 py-16">
-          <section className="rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">🚀 Mission-Control Builder Track</p>
-            <h1 className="mt-4 font-heading text-4xl font-extrabold text-white sm:text-5xl">AI-Native Engineering for National-Scale Deployment</h1>
-            <p className="mt-4 text-sm text-slate-300">Next Cohort: March · 20 Seats</p>
-            <p className="mt-6 text-base text-slate-200">
-              Build mission-critical systems with AI copilots, weekly shipped outcomes, and a deployment-first curriculum designed for Philippine public-sector operations.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="/apply"
-                className="inline-flex items-center justify-center rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-ebony shadow-[0_0_40px_rgba(250,84,4,0.65)] transition hover:-translate-y-1 hover:bg-orange-500"
-              >
-                Apply Now &rarr;
-              </a>
-              <a
-                href="#overview-video"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-intl-orange hover:text-intl-orange"
-              >
-                Watch Overview &rarr;
-              </a>
+          <section className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-slate-950/80 to-black/85 p-10 shadow-[0_35px_95px_rgba(0,0,0,0.65)]">
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_60%)]" />
+              <div className="absolute -right-10 top-0 h-40 w-40 rounded-full bg-intl-orange/20 blur-3xl" />
             </div>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {heroStats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-white/10 bg-black/40 p-4">
-                  <p className="text-[11px] uppercase tracking-[0.3em] text-slate-400">{stat.label}</p>
-                  <p className="mt-2 text-2xl font-semibold text-white">{stat.value}</p>
-                  <p className="text-sm text-slate-400">{stat.detail}</p>
+            <div className="relative z-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">🚀 Mission-Control Builder Track</p>
+              <h1 className="mt-4 font-heading text-4xl font-extrabold text-white sm:text-5xl">AI-Native Engineering for National-Scale Deployment</h1>
+              <p className="mt-4 text-sm text-slate-300">Next Cohort: March · 20 Seats</p>
+              <p className="mt-6 text-base text-slate-200">
+                Build mission-critical systems with AI copilots, weekly shipped outcomes, and a deployment-first curriculum designed for Philippine public-sector operations.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="/apply"
+                  className="inline-flex items-center justify-center rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-ebony shadow-[0_0_40px_rgba(250,84,4,0.65)] transition hover:-translate-y-1 hover:bg-orange-500"
+                >
+                  Apply Now &rarr;
+                </a>
+                <a
+                  href="#overview-video"
+                  className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-intl-orange hover:text-intl-orange"
+                >
+                  Watch Overview &rarr;
+                </a>
+              </div>
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                {heroStats.map((stat) => (
+                  <div key={stat.label} className="rounded-2xl border border-white/10 bg-black/40 p-4">
+                    <p className="text-[11px] uppercase tracking-[0.3em] text-slate-400">{stat.label}</p>
+                    <p className="mt-2 text-2xl font-semibold text-white">{stat.value}</p>
+                    <p className="text-sm text-slate-400">{stat.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-b from-black/80 via-slate-950/75 to-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_60%)]" />
+              <div className="absolute -left-16 bottom-0 h-40 w-40 rounded-full bg-cerulean/20 blur-3xl" />
+            </div>
+            <div className="relative z-10">
+              <div className="grid gap-8 lg:grid-cols-2">
+                <div className="space-y-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cerulean">Build the Systems a Nation Runs On</p>
+                  <p className="text-sm text-slate-300">
+                    Dogm.ai is equipping agencies across the Philippines with mission-control AI for public safety, logistics, and governance.
+                  </p>
+                  <p className="text-sm text-slate-300">
+                    This Builder Track prepares you to ship full-stack prototypes, embed AI copilots, and deliver operational dashboards that handle public-sector constraints.
+                    Every week ends with proof-of-work that real agencies can review.
+                  </p>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="rounded-[32px] border border-white/10 bg-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
-            <div className="grid gap-8 lg:grid-cols-2">
-              <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cerulean">Build the Systems a Nation Runs On</p>
-                <p className="text-sm text-slate-300">
-                  Dogm.ai is equipping agencies across the Philippines with mission-control AI for public safety, logistics, and governance.
-                </p>
-                <p className="text-sm text-slate-300">
-                  This Builder Track prepares you to ship full-stack prototypes, embed AI copilots, and deliver operational dashboards that handle public-sector constraints.
-                  Every week ends with proof-of-work that real agencies can review.
-                </p>
-              </div>
-              <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-slate-400">You will learn to:</p>
-                <ul className="mt-4 space-y-3 text-sm text-slate-200">
-                  {[
-                    "Ship full-stack mission-control prototypes",
-                    "Integrate AI copilots into real workflows",
-                    "Build operational dashboards, alerts, and automations",
-                    "Design systems resilient to public-sector constraints",
-                    "Deliver proof-of-work every single week",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-intl-orange" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 text-sm text-intl-orange">You don’t just learn to build — you build what the country needs.</p>
+                <div className="rounded-3xl border border-white/10 bg-black/40 p-6">
+                  <p className="text-[11px] uppercase tracking-[0.3em] text-slate-400">You will learn to:</p>
+                  <ul className="mt-4 space-y-3 text-sm text-slate-200">
+                    {[
+                      "Ship full-stack mission-control prototypes",
+                      "Integrate AI copilots into real workflows",
+                      "Build operational dashboards, alerts, and automations",
+                      "Design systems resilient to public-sector constraints",
+                      "Deliver proof-of-work every single week",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-intl-orange" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 text-sm text-intl-orange">You don’t just learn to build — you build what the country needs.</p>
+                </div>
               </div>
             </div>
           </section>
 
-          <section className="rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
+          <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-[#05060b] via-black/75 to-slate-950/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <div className="grid gap-10 lg:grid-cols-2">
               <div className="space-y-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-intl-orange/80">Who the Track Is For</p>
@@ -234,7 +246,7 @@ export default function BuilderTrackPage() {
             </div>
           </section>
 
-          <section className="rounded-[32px] border border-white/10 bg-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
+          <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-slate-950/80 via-black/75 to-[#05060b] p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cerulean">The Curriculum</p>
             <h2 className="mt-3 text-3xl font-bold text-white">12 Weeks · Mission-Control Focused · Outcome-Driven</h2>
             <p className="mt-2 text-sm text-slate-300">Every sprint produces agency-usable, verifiable artifacts.</p>
@@ -306,7 +318,7 @@ export default function BuilderTrackPage() {
 
           <SampleProjectsSection projects={sampleProjects} />
 
-          <section className="rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
+          <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-black/80 via-slate-950/70 to-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <h2 className="text-3xl font-bold text-white">What Graduates Leave With</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               {[
@@ -335,7 +347,7 @@ export default function BuilderTrackPage() {
             </div>
           </section>
 
-          <section className="rounded-[32px] border border-white/10 bg-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
+          <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-slate-950/80 via-black/80 to-slate-950/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="space-y-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cerulean">The AI Co-Pilot Advantage</p>
@@ -375,7 +387,7 @@ export default function BuilderTrackPage() {
             </div>
           </section>
 
-          <section className="rounded-[32px] border border-white/10 bg-black/60 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
+          <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-black/80 via-slate-950/70 to-black/75 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <h2 className="text-3xl font-bold text-white">Outcomes That Stand Up to Scrutiny</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {proofItems.map((item) => (
@@ -387,7 +399,7 @@ export default function BuilderTrackPage() {
             </div>
           </section>
 
-          <section className="rounded-[32px] border border-white/10 bg-black/70 p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
+          <section className="rounded-[32px] border border-white/10 bg-gradient-to-b from-slate-950/80 via-black/70 to-[#05060b] p-10 shadow-[0_30px_85px_rgba(0,0,0,0.6)]">
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-intl-orange">Apply to the Builder Track</p>
