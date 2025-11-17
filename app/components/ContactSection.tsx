@@ -5,6 +5,8 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const contactChannels = [
     {
@@ -26,10 +28,42 @@ export default function ContactSection() {
     },
   ];
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitted(true);
-    event.currentTarget.reset();
+    const form = event.currentTarget;
+    setSubmitted(false);
+    setErrorMessage(null);
+    setIsSubmitting(true);
+
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name")?.toString().trim() ?? "",
+      email: formData.get("email")?.toString().trim() ?? "",
+      message: formData.get("message")?.toString().trim() ?? "",
+    };
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const error = await response.json().catch(() => null);
+        throw new Error(error?.error ?? "Something went wrong. Please try again.");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Something went wrong. Please try again.";
+      setErrorMessage(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -154,13 +188,19 @@ export default function ContactSection() {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold text-ebony shadow-[0_0_30px_rgba(250,84,4,0.45)] transition hover:-translate-y-0.5 hover:bg-orange-500"
+                className="w-full rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold text-ebony shadow-[0_0_30px_rgba(250,84,4,0.45)] transition hover:-translate-y-0.5 hover:bg-orange-500 disabled:cursor-not-allowed disabled:opacity-60"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
               {submitted && (
                 <div className="rounded-2xl border border-cerulean/30 bg-cerulean/10 px-4 py-3 text-center text-sm font-semibold text-cerulean">
                   🎉 Message received. Expect a reply within 24 hours.
+                </div>
+              )}
+              {errorMessage && (
+                <div className="rounded-2xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-center text-sm font-semibold text-red-200">
+                  {errorMessage}
                 </div>
               )}
             </form>
