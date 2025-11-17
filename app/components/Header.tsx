@@ -31,11 +31,14 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button className="hidden rounded-full border border-slate-700 px-4 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:border-slate-500 hover:text-white md:inline-flex">
-            Sign in
-          </button>
           <Link
-            href="#apply"
+            href="/signin"
+            className="hidden rounded-full border border-slate-700 px-4 py-1.5 text-xs font-medium text-slate-200 transition-colors hover:border-slate-500 hover:text-white md:inline-flex"
+          >
+            Sign in
+          </Link>
+          <Link
+            href="/#apply"
             className="inline-flex items-center gap-2 rounded-full bg-intl-orange px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-ebony shadow-[0_0_30px_rgba(250,84,4,0.45)] transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-orange-500"
           >
             Apply Now <span className="text-base">&rarr;</span>
