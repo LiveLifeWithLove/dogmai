@@ -13,10 +13,7 @@ const commitments = [
   "Signals that translate into recruiter-ready proof.",
 ];
 
-const providers = [
-  { label: "Continue with Google", icon: "G" },
-  { label: "Continue with GitHub", icon: "{}" },
-];
+const providers = [{ label: "Continue with Google", icon: "G" }];
 
 export const metadata: Metadata = {
   title: "Sign in — DOGM.AI",
