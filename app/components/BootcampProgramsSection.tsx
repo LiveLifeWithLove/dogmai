@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { bootcampPrograms } from "@/lib/bootcamp-programs";
 import { useMemo, useState } from "react";
 import AnimatedSection from "./AnimatedSection";
@@ -79,11 +80,12 @@ export default function BootcampProgramsSection() {
                   className="text-sm text-slate-300"
                   dangerouslySetInnerHTML={{ __html: activeProgram.description }}
                 />
-                <button
-                  className={`rounded-full px-5 py-2 text-xs font-bold shadow-lg transition-all duration-200 hover:scale-105 ${activeProgram.buttonClass}`}
+                <Link
+                  href={activeProgram.buttonHref ?? "/apply#apply-form"}
+                  className={`inline-flex items-center justify-center rounded-full px-5 py-2 text-xs font-bold shadow-lg transition-all duration-200 hover:scale-105 ${activeProgram.buttonClass}`}
                 >
                   {activeProgram.buttonText}
-                </button>
+                </Link>
 
                 <div className="border-t border-white/5 pt-3">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-400">

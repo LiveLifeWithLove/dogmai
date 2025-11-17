@@ -14,6 +14,7 @@ export type BootcampProgram = {
   description: string;
   buttonText: string;
   buttonClass: string;
+  buttonHref?: string;
   tags: string[];
   curriculumLabel: string;
   curriculum: CurriculumItem[];
@@ -35,6 +36,7 @@ export const bootcampPrograms: BootcampProgram[] = [
       "Build production-grade apps from idea &rarr; prototype &rarr; deployed product using modern frontends, pragmatic backends, and AI-native workflows.",
     buttonText: "See Curriculum",
     buttonClass: "bg-gradient-to-r from-intl-orange to-cerulean text-ebony",
+    buttonHref: "/curriculum/builder-track",
     tags: [
       "Ship full-stack products",
       "AI pair programming",
@@ -222,4 +224,3 @@ export const bootcampPrograms: BootcampProgram[] = [
       "Capstone: A complete operating system of workflows, automations, and client-ready assets.",
   },
 ];
-
