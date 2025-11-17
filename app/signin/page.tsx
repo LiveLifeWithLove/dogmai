@@ -106,7 +106,7 @@ export default function SignInPage() {
                 <span className="text-slate-200">Email address</span>
                 <input
                   type="email"
-                  placeholder="you@company.com"
+                  placeholder="you@email.com"
                   className="w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-intl-orange focus:outline-none focus:ring-2 focus:ring-intl-orange/40"
                 />
               </label>
@@ -114,7 +114,7 @@ export default function SignInPage() {
                 <span className="text-slate-200">Password</span>
                 <input
                   type="password"
-                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                  placeholder="************"
                   className="w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-intl-orange focus:outline-none focus:ring-2 focus:ring-intl-orange/40"
                 />
               </label>
