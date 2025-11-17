@@ -88,6 +88,7 @@ export const bootcampPrograms: BootcampProgram[] = [
       "Design interfaces that think. Blend UX fundamentals with AI-assisted creativity to produce systems, prototypes, and polished case studies.",
     buttonText: "View Curriculum",
     buttonClass: "bg-gradient-to-r from-cerulean to-allports text-ebony",
+    buttonHref: "/curriculum/designer-track",
     tags: [
       "Design systems mastery",
       "AI concept sprints",
