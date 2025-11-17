@@ -1,10 +1,11 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 const stats = [
-  { label: "Reps logged", value: "240k+" },
-  { label: "Cohort mentors", value: "12" },
-  { label: "Avg. uplift", value: "3x output" },
+  { label: "Founding builders", value: "48" },
+  { label: "Mentor hours logged", value: "600+" },
+  { label: "Beta sprints shipped", value: "320" },
 ];
 
 const commitments = [
@@ -24,13 +25,19 @@ export default function SignInPage() {
   return (
     <div className="relative min-h-screen bg-ebony text-slate-100">
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-        <div
-          className="absolute inset-0 bg-cover bg-[length:180%] bg-center opacity-70 blur-[1px] sm:bg-[length:120%]"
-          style={{ backgroundImage: "url(/flare-bg.png)" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ebony/40 via-ebony/80 to-ebony" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_-5%,rgba(250,84,4,0.35),transparent_45%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_-10%,rgba(4,183,236,0.35),transparent_45%)]" />
+        <div className="relative h-full w-full">
+          <Image
+            src="/flare-bg.png"
+            alt="DOGM.AI flare background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-70 blur-[1px] sm:object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ebony/40 via-ebony/80 to-ebony" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_-5%,rgba(250,84,4,0.35),transparent_45%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_-10%,rgba(4,183,236,0.35),transparent_45%)]" />
+        </div>
       </div>
 
       <div className="relative flex min-h-screen flex-col">
