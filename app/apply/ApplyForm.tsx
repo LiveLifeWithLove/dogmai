@@ -11,6 +11,25 @@ type ApplyFormProps = {
   trackOptions: string[];
 };
 
+type ApplicationPayload = {
+  fullName: string;
+  email: string;
+  phone: string | null;
+  birthday: string | null;
+  company: string | null;
+  focus: string;
+  trackInterest: string | null;
+  experience: string | null;
+  roleTitle: string | null;
+  portfolioUrl: string | null;
+  toolStack: string | null;
+  availability: string | null;
+  startWindow: string | null;
+  motivation: string | null;
+  metadata: Record<string, unknown>;
+  formSnapshot: Record<string, string>;
+};
+
 const buildMessageBody = (formData: FormData) => {
   const preferredTrack = formData.get("trackInterest")?.toString().trim() || "Not selected";
   const lines = [
@@ -32,6 +51,46 @@ const buildMessageBody = (formData: FormData) => {
   return lines.join("\n");
 };
 
+const toEntriesObject = (formData: FormData) => {
+  const entries: Record<string, string> = {};
+
+  formData.forEach((value, key) => {
+    if (typeof value === "string") {
+      entries[key] = value.trim();
+    }
+  });
+
+  return entries;
+};
+
+const orNull = (value?: string) => (value && value.length > 0 ? value : null);
+
+const buildApplicationPayload = (
+  entries: Record<string, string>,
+  selectedTrack: string,
+): ApplicationPayload => ({
+  fullName: entries.name ?? "",
+  email: entries.email ?? "",
+  phone: orNull(entries.phone),
+  birthday: orNull(entries.birthday),
+  company: orNull(entries.company),
+  focus: entries.focus || selectedTrack || "",
+  trackInterest: orNull(entries.trackInterest ?? selectedTrack),
+  experience: orNull(entries.experience),
+  roleTitle: orNull(entries.role),
+  portfolioUrl: orNull(entries.portfolio),
+  toolStack: orNull(entries.stack),
+  availability: orNull(entries.availability),
+  startWindow: orNull(entries.startWindow),
+  motivation: orNull(entries.notes),
+  metadata: {
+    submittedAt: new Date().toISOString(),
+    selectedTrack,
+    userAgent: typeof navigator !== "undefined" ? navigator.userAgent : undefined,
+  },
+  formSnapshot: entries,
+});
+
 export default function ApplyForm({ selectedTrack, onTrackChange, trackOptions }: ApplyFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -46,14 +105,15 @@ export default function ApplyForm({ selectedTrack, onTrackChange, trackOptions }
     setErrorMessage(null);
 
     const formData = new FormData(form);
+    const entries = toEntriesObject(formData);
+    const applicationPayload = buildApplicationPayload(entries, selectedTrack);
     const payload = {
-      name: formData.get("name")?.toString().trim() ?? "",
-      email: formData.get("email")?.toString().trim() ?? "",
       message: buildMessageBody(formData),
+      application: applicationPayload,
     };
 
     try {
-      const response = await fetch("/api/send", {
+      const response = await fetch("/api/applications", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

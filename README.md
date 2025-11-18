@@ -34,3 +34,9 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Supabase Integration
+
+- Create a Supabase project and set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in `.env`. The current setup points to `https://ufxfwsntszzpnkurvein.supabase.co`.
+- Use the shared helper exported from `lib/supabase-client.ts` whenever you need to persist the application form (see `app/components/ApplySection.tsx` and `app/apply/ApplyForm.tsx` for the UI hook-up points).
+- When wiring mutations, call `supabase.from("bootcamp_applications").insert(...)` on the server (API route or form action) so client secrets remain safe.

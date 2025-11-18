@@ -64,7 +64,7 @@ export default function TrackSelectorFormSection() {
           ))}
         </div>
         <p className="mt-6 text-center text-xs text-slate-400">
-          Switching tracks updates the application form automatically. Mention "still deciding" in your notes if you want guidance.
+          Switching tracks updates the application form automatically. Mention &quot;still deciding&quot; in your notes if you want guidance.
         </p>
       </section>
 

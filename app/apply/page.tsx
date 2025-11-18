@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Header from "../components/Header";
+import Link from "next/link";
 import Footer from "../components/Footer";
 import BootcampStructure from "../components/BootcampStructure";
 import TrackSelectorFormSection from "./TrackSelectorFormSection";
@@ -87,12 +88,12 @@ export default function ApplyPage() {
                   >
                     Start your application
                   </a>
-                  <a
+                  <Link
                     href="/#contact"
                     className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-intl-orange hover:text-intl-orange"
                   >
                     Talk to the team
-                  </a>
+                  </Link>
                 </div>
               </div>
 

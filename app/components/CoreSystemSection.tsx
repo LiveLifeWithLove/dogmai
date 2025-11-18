@@ -204,7 +204,7 @@ export default function CoreSystemSection() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-intl-orange">What DOGM.AI Actually Is</p>
             <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">Accelerate Mastery. Learn With AI. Build Proof.</h2>
             <p className="mt-4 max-w-xl text-sm text-slate-300">
-              DOGM.AI is not a course. It's a structured operating system that turns daily discipline into shipped work, measurable growth, and a portfolio that proves how you think and build.
+              DOGM.AI is not a course. It&apos;s a structured operating system that turns daily discipline into shipped work, measurable growth, and a portfolio that proves how you think and build.
             </p>
             <p className="mt-4 max-w-xl text-sm text-slate-300">
               AI guides your planning, feedback, and iteration - but you do the reps. Every sprint is intentional, every artifact is proof, and every loop compounds your edge.
