@@ -39,10 +39,10 @@ export default function AccelerationSection() {
             AI Isn&apos;t the Shortcut - It&apos;s the Multiplier
           </h2>
           <p className="mt-3 text-sm text-slate-300">
-            Acceleration isn&apos;t about working faster&mdash;it&apos;s about removing
-            drag, tightening feedback loops, and shrinking the gap between idea
-            and output. The AI Co-Pilot keeps you learning, building, and
-            iterating at a pace that used to take months.
+            Acceleration isn&apos;t about working faster&mdash;it&apos;s about
+            removing drag, tightening feedback loops, and shrinking the gap
+            between idea and output. The AI Co-Pilot keeps you learning,
+            building, and iterating at a pace that used to take months.
           </p>
         </div>
 
@@ -56,10 +56,11 @@ export default function AccelerationSection() {
               <div className="relative z-10 flex flex-col">
                 <div className="mb-3 flex items-center gap-2">
                   <span className={`h-2 w-2 rounded-full ${item.dotClass}`} />
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-300">
+                  <span className="leading-none text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-300">
                     {item.label}
                   </span>
                 </div>
+
                 <h3 className="text-lg font-bold text-white">{item.title}</h3>
                 <p
                   className="mt-2 text-xs text-slate-300 leading-relaxed"
@@ -72,8 +73,8 @@ export default function AccelerationSection() {
 
         <div className="mx-auto mt-14 max-w-3xl text-center">
           <p className="text-sm text-slate-300 leading-relaxed">
-            AI doesn&apos;t replace the work&mdash;it amplifies your ability to do
-            the work that matters as a Digital Professional. The result:
+            AI doesn&apos;t replace the work&mdash;it amplifies your ability to
+            do the work that matters as a Digital Professional. The result:
             accelerated mastery in weeks, not months.
           </p>
         </div>

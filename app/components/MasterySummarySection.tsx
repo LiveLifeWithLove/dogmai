@@ -11,24 +11,25 @@ const transformations: Transformation[] = [
     number: "1",
     title: "Intentional discipline",
     description:
-      "You develop the systems and habits that carry you through high-output work.",
+      "You install systems and habits that protect your focus and make high-output work your default—not a lucky day.",
   },
   {
     number: "2",
     title: "Consistent outcomes",
-    description: "You ship on demand - weekly, reliably, publicly.",
+    description:
+      "You ship on a weekly cadence—clean, reviewable, public work your team or clients can rely on.",
   },
   {
     number: "3",
     title: "Accelerated growth",
     description:
-      "With short feedback loops, every project becomes a step-change in skill.",
+      "Short feedback loops turn every project into a step-change in skill, not just another task crossed off.",
   },
   {
     number: "4",
     title: "AI-native mastery",
     description:
-      "You don't just use AI. You work with it - to automate, analyze, design, build, and deliver at modern speed.",
+      "You don’t just “use” AI—you orchestrate it to automate, analyse, design, build, and deliver at modern speed.",
   },
 ];
 

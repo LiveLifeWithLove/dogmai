@@ -30,13 +30,13 @@ const journeyCards: JourneyCard[] = [
     badgeClass: "bg-intl-orange/10 text-intl-orange",
     badge: "Structure",
     title: "The Foundation",
-    subtitle: "Craft the habit, then trust the habit.",
+    subtitle: "Build the habit, then let the habit build you.",
     description:
-      "Structure beats hype. Daily sprints, AI prompts, and reflection rituals build the muscle Digital Professionals rely on to deliver even when motivation dips.",
+      "Hype fades. Systems don’t. Daily sprints, AI-assisted workflows, and tight reflection loops forge the consistency elite Digital Professionals rely on—especially when motivation drops.",
     bullets: [
-      "Daily learning sprints",
-      "Guided task systems & accountability",
-      "AI for planning & performance tracking",
+      "Daily learning sprints with clear outputs",
+      "Guided task systems & accountability rituals",
+      "AI for planning, prioritisation & performance tracking",
     ],
   },
   {
@@ -46,13 +46,13 @@ const journeyCards: JourneyCard[] = [
     badgeClass: "bg-cerulean/10 text-cerulean",
     badge: "Tangibility",
     title: "The Measure",
-    subtitle: "Proof beats promises.",
+    subtitle: "Results speak louder than ambition.",
     description:
-      "Every loop ends with something you can ship. Outcomes turn effort into proof so Digital Professionals can show measurable value.",
+      "Every cycle ends with something real, shippable, and portfolio‑ready. Outcomes turn effort into evidence—clear, undeniable proof of progress.",
     bullets: [
-      "Project-based modules",
-      "Real, deployable results each week",
-      "Portfolio built by incremental achievement",
+      "Project-based modules anchored in real briefs",
+      "Deployable results at the end of each loop",
+      "Portfolio built through stacked micro‑wins",
     ],
   },
   {
@@ -62,13 +62,13 @@ const journeyCards: JourneyCard[] = [
     badgeClass: "bg-allports/10 text-allports",
     badge: "Momentum",
     title: "The Momentum",
-    subtitle: "Growth is deliberate iteration.",
+    subtitle: "Growth is intentional repetition, refined.",
     description:
-      "Feedback turns results into insight. Reflection, critique, and AI reviews tighten the distance between attempt and improvement for every Digital Professional.",
+      "Feedback converts output into insight. Reflection, critique, and AI‑powered reviews shrink the gap between attempt and improvement—week after week.",
     bullets: [
-      "Continuous mentor + AI feedback",
-      "Iterative improvement challenges",
-      "Growth dashboards & trajectories",
+      "Continuous mentor + AI feedback loops",
+      "Deliberate iteration and improvement challenges",
+      "Growth dashboards to visualise your trajectory",
     ],
   },
   {
@@ -76,15 +76,15 @@ const journeyCards: JourneyCard[] = [
     dotClass: "bg-intl-orange",
     bulletDotClass: "bg-intl-orange",
     badgeClass: "bg-intl-orange/10 text-intl-orange",
-    badge: "Transformation",
+    badge: "Mastery",
     title: "The Transformation",
-    subtitle: "Mastery is earned by designing the playbook.",
+    subtitle: "Mastery begins when you start writing the playbook.",
     description:
-      "Repetition becomes intuition. Mastery means you design the system, lead the decisions, and invent new patterns that define Digital Professional standards.",
+      "Repetition turns into instinct. Mastery means crafting your own system, guiding decisions with confidence, and building patterns others follow.",
     bullets: [
-      "Advanced project integrations",
-      "AI-simulated interviews & technical drills",
-      "Mentorship for portfolio & personal brand",
+      "Advanced project integrations across domains",
+      "AI‑simulated interviews & technical drills",
+      "Mentorship for portfolio narrative & personal brand",
     ],
   },
   {
@@ -92,15 +92,15 @@ const journeyCards: JourneyCard[] = [
     dotClass: "bg-cerulean",
     bulletDotClass: "bg-cerulean",
     badgeClass: "bg-cerulean/10 text-cerulean",
-    badge: "Multiplier",
+    badge: "Leverage",
     title: "The Multiplier",
-    subtitle: "Acceleration is mastery put to work.",
+    subtitle: "Acceleration is mastery, multiplied.",
     description:
-      "With fundamentals locked, AI multiplies your reach. Routine work shrinks so experimentation, leverage, and delivery expand for client-facing Digital Professionals.",
+      "With your foundations solid, AI amplifies your output. Busywork shrinks while experimentation, leverage, and high‑impact delivery scale fast.",
     bullets: [
-      "Rapid prototyping & testing with AI",
-      "Workflow automation & optimization",
-      "Real-world speed-to-deployment drills",
+      "Rapid prototyping & testing with AI copilots",
+      "Workflow automation & optimisation for speed",
+      "Real‑world speed‑to‑deployment drills",
     ],
   },
   {
@@ -110,13 +110,13 @@ const journeyCards: JourneyCard[] = [
     badgeClass: "bg-allports/10 text-allports",
     badge: "Evolution",
     title: "The Evolution",
-    subtitle: "Intelligence is disciplined creativity.",
+    subtitle: "Intelligence is creativity with precision.",
     description:
-      "Human judgment plus machine reasoning becomes your edge. You co-create with AI, model complex ideas, and ship intelligent systems on demand.",
+      "Human judgment fused with machine reasoning becomes your competitive edge. You co‑create with AI, shape complex ideas, and deliver intelligent systems on command.",
     bullets: [
-      "AI co-creation labs",
-      "Cognitive learning analytics & personalization",
-      "Research & innovation challenges",
+      "AI co‑creation labs for complex problem‑solving",
+      "Cognitive learning analytics & personalisation",
+      "Research & innovation challenges with real impact",
     ],
   },
 ];
@@ -253,9 +253,9 @@ export default function JourneySection() {
               The DOGM.AI Loop
             </h2>
             <p className="mt-3 max-w-xl text-sm text-slate-300">
-              A repeatable system that compounds skill every week: Discipline
+              A repeatable system that compounds skill every week: <strong>Discipline
               &rarr; Outcomes &rarr; Growth &rarr; Mastery &rarr; Acceleration
-              &rarr; Intelligence. Each stage builds on the last so practice
+              &rarr; Intelligence.</strong> Each stage builds on the last so practice
               becomes proof and proof becomes leverage.
             </p>
             <p className="mt-2 max-w-xl text-sm text-slate-300">
