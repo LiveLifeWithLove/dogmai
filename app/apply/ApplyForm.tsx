@@ -3,8 +3,13 @@
 import { FormEvent, useState } from "react";
 
 const experienceLevels = ["0-2 years", "3-5 years", "6-10 years", "10+ years"];
-const focusTracks = ["Product Systems", "Automation Engineering", "Revenue Enablement", "AI Program Leadership"];
 const startWindows = ["ASAP (within 2 weeks)", "Next 30 days", "Next quarter", "Just exploring timelines"];
+
+type ApplyFormProps = {
+  selectedTrack: string;
+  onTrackChange: (track: string) => void;
+  trackOptions: string[];
+};
 
 const buildMessageBody = (formData: FormData) => {
   const preferredTrack = formData.get("trackInterest")?.toString().trim() || "Not selected";
@@ -27,7 +32,7 @@ const buildMessageBody = (formData: FormData) => {
   return lines.join("\n");
 };
 
-export default function ApplyForm() {
+export default function ApplyForm({ selectedTrack, onTrackChange, trackOptions }: ApplyFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -142,13 +147,11 @@ export default function ApplyForm() {
             id="focus"
             name="focus"
             required
+            value={selectedTrack}
+            onChange={(event) => onTrackChange(event.target.value)}
             className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-sm text-slate-100 transition focus:border-intl-orange focus:outline-none"
-            defaultValue=""
           >
-            <option value="" disabled>
-              Select a track
-            </option>
-            {focusTracks.map((track) => (
+            {trackOptions.map((track) => (
               <option key={track} value={track}>
                 {track}
               </option>
