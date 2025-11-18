@@ -30,28 +30,28 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-slate-300">
             <span className="inline-flex items-center gap-2 rounded-full border border-intl-orange/40 bg-intl-orange/10 px-3 py-1 text-intl-orange">
               <span className="h-1.5 w-1.5 rounded-full bg-intl-orange" />
-              DOGM.AI
+              DOGM.AI BOOTCAMP
             </span>
             <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] text-slate-200">
-              Next cohort: Feb 16 · 50 seats
+              Next cohort: Feb 16 | 50 seats
             </span>
           </div>
 
           <div className="space-y-4">
             <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Build the discipline to learn, ship, and prove AI-native mastery.
+              The AI bootcamp built to get you hired for the work you ship.
             </h1>
             <p className="text-base text-slate-200 sm:text-lg">
-              We turn your daily reps into portfolio-ready proof with AI copilots, mentor critiques,
-              and a system that compounds your craft every single week.
+              12 intense weeks of shipping live builds, ruthless mentor feedback, and hiring ops
+              support that turns your progress into a narrative recruiters believe.
             </p>
           </div>
 
           <div className="grid gap-3 text-sm text-slate-200 sm:grid-cols-3">
             {[
-              { label: "AI-guided sprints", value: "Daily" },
-              { label: "Shipped outcomes", value: "Weekly" },
-              { label: "Readiness assessment", value: "Included" },
+              { label: "Live mentor coaching", value: "4x / week" },
+              { label: "Portfolio launches", value: "3+" },
+              { label: "Hiring partner intros", value: "Guaranteed" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -70,14 +70,14 @@ export default function HeroSection() {
               href="/apply"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-intl-orange px-6 py-3 text-sm font-semibold text-ebony shadow-[0_0_40px_rgba(250,84,4,0.6)] transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:bg-orange-500"
             >
-              Apply Now
+              Apply to the Bootcamp
               <span className="text-lg">&rarr;</span>
             </a>
             <button
               type="button"
               className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 px-5 py-2.5 text-xs font-medium text-slate-200 backdrop-blur-sm transition-all duration-200 hover:border-slate-500 hover:text-white hover:scale-105"
             >
-              Watch 90-Second Overview
+              Watch the 90-Second Tour
               <span className="text-lg">&rarr;</span>
             </button>
           </div>
@@ -86,24 +86,25 @@ export default function HeroSection() {
         <div className="w-full max-w-sm space-y-4 rounded-3xl border border-white/10 bg-black/50 p-5 text-sm text-slate-200 shadow-[0_25px_55px_rgba(0,0,0,0.55)]">
           <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
             <p className="text-[11px] uppercase tracking-[0.18em] text-intl-orange">
-              Why DOGM.AI
+              Inside the Bootcamp
             </p>
             <p className="mt-2 text-base font-semibold text-white">
-              Practice with AI. Ship proof. Design a career narrative recruiters believe.
+              12-week live cohort engineered around disciplined shipping and career outcomes.
             </p>
             <p className="mt-2 text-xs text-slate-400">
-              Daily accountability + weekly outcomes + AI readiness assessments.
+              Daily accountability, coach-led reviews, demo days, and a placement squad translating
+              your work into signed offers.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/40 p-4">
             <p className="text-[11px] uppercase tracking-[0.25em] text-cerulean">
-              Built for Digital Professionals
+              Who Thrives Here
             </p>
             <ul className="mt-2 space-y-2 text-xs text-slate-300">
-              <li>• Builders: launch AI-native products faster.</li>
-              <li>• Designers: craft intelligent, adaptive interfaces.</li>
-              <li>• Analysts: turn data into automated insights.</li>
-              <li>• Operators: streamline workflows and execution.</li>
+              <li>• Product builders ready to lead AI roadmaps and win stakeholder trust.</li>
+              <li>• Designers shaping adaptive interfaces with live prototypes, not mockups.</li>
+              <li>• Analysts transforming data stacks into automated decision engines.</li>
+              <li>• Operators obsessed with automating workflows and scaling execution.</li>
             </ul>
           </div>
         </div>
