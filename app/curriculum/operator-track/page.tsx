@@ -4,8 +4,8 @@ import Footer from "@/app/components/Footer";
 import SampleProjectsSection, { type SampleProject } from "../builder-track/SampleProjectsSection";
 
 export const metadata: Metadata = {
-  title: "Mission-Control Execution Track | DOGM.AI",
-  description: "Execution Track curriculum for digital professionals who run AI-native operations, automation, and delivery for Philippine missions.",
+  title: "Mission-Control Operator Track | DOGM.AI",
+  description: "Operator Track curriculum for digital professionals who run AI-native operations, automation, and delivery for Philippine missions.",
 };
 
 const heroStats = [
