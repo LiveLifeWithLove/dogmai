@@ -24,11 +24,11 @@ export default function Home() {
 
         <main>
           <HeroSection />
+          <BootcampProgramsSection />
           <BootcampStructure />
           <CoreSystemSection />
           <JourneySection />
           <MasterySummarySection />
-          <BootcampProgramsSection />
           <AccelerationSection />
           <OutcomesSection />
           <ApplySection />
