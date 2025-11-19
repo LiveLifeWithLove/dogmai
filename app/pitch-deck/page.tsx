@@ -19,7 +19,7 @@ const deckTheme = {
 };
 
 const stats = [
-  { label: "Cohort Launch", value: "Feb 16" },
+  { label: "Cohort Launch", value: "March 16" },
   { label: "Seats", value: "50 selective" },
   { label: "Format", value: "Live & async" },
 ];
@@ -357,7 +357,7 @@ export default function PitchDeckPage() {
                     Engineered for career outcomes.
                   </Heading>
                   <p className="text-lg font-semibold text-white">
-                    12-week live cohort | Feb 16 | 50 seats
+                    12-week live cohort | March 16 | 50 seats
                   </p>
                 </div>
 

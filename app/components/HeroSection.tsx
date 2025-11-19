@@ -33,7 +33,7 @@ export default function HeroSection() {
               DOGM.AI BOOTCAMP
             </span>
             <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] text-slate-200">
-              Next cohort: Feb 16 | 50 seats
+              Next cohort: March 16 | 50 seats
             </span>
           </div>
 
