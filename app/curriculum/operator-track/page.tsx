@@ -138,11 +138,22 @@ export default function ExecutionTrackPage() {
             </div>
             <div className="relative z-10 space-y-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Mission-Control Execution Track</p>
-                <h1 className="mt-4 font-heading text-4xl font-extrabold text-white sm:text-5xl">AI-Native Execution Systems for Digital Professionals</h1>
-                <p className="mt-4 text-sm text-slate-300">Next Cohort: March - 50 Seats</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">
+                  Mission-Control Operator Track
+                </p>
+
+                <h1 className="mt-4 font-heading text-4xl font-extrabold text-white sm:text-5xl">
+                  AI-Native Systems for Digital System Operators
+                </h1>
+
+                <p className="mt-4 text-sm text-slate-300">
+                  Next Cohort: March – 50 Seats
+                </p>
+
                 <p className="mt-4 text-base text-slate-200">
-                  Build operations, automations, and communications that agencies rely on. Every week you ship a verifiable artifact backed by AI copilots, data, and disciplined rituals.
+                  Learn to operate, manage, and optimize AI-powered workflows that agencies rely on. 
+                  Each week you complete a mission-tested artifact using AI copilots, real data, 
+                  and mission-control operating rituals.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <a

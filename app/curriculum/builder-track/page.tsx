@@ -146,7 +146,7 @@ export default function BuilderTrackPage() {
               <div className="absolute -right-10 top-0 h-40 w-40 rounded-full bg-intl-orange/20 blur-3xl" />
             </div>
             <div className="relative z-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">🚀 Mission-Control Builder Track</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-intl-orange/80">Mission-Control Builder Track</p>
               <h1 className="mt-4 font-heading text-4xl font-extrabold text-white sm:text-5xl">AI-Native Engineering for National-Scale Deployment</h1>
               <p className="mt-4 text-sm text-slate-300">Next Cohort: March · 20 Seats</p>
               <p className="mt-6 text-base text-slate-200">
