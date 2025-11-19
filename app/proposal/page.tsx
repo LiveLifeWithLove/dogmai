@@ -56,7 +56,7 @@ const tracks = [
     focus: "Insights, models, data pipelines, decision automation.",
   },
   {
-    name: "Digital Professional",
+    name: "Operator",
     focus: "Execution, workflows, operations, cross-functional AI tasks.",
   },
 ];
