@@ -92,6 +92,29 @@ function SlideCard({
   );
 }
 
+const pricingTracks = [
+  {
+    track: "Builder Track",
+    price: "Essentials ₱999 · Projects ₱6,990 · Full ₱18,500 · Accelerator ₱27,500",
+    description: "Full-stack builders completing live product sprints and capstones.",
+  },
+  {
+    track: "Designer Track",
+    price: "Essentials ₱999 · Projects ₱5,500 · Full ₱15,500 · Accelerator ₱22,900",
+    description: "UX/UI creatives shipping polished experiences with mentorship.",
+  },
+  {
+    track: "Analyst Track",
+    price: "Essentials ₱999 · Projects ₱5,900 · Full ₱17,900 · Accelerator ₱26,500",
+    description: "Analysts building dashboards, ML-ready reports, and automated insights.",
+  },
+  {
+    track: "Operator Track",
+    price: "Essentials ₱999 · Projects ₱4,900 · Full ₱14,500 · Accelerator ₱21,900",
+    description: "Ops leaders automating workflows, templating delivery, and scaling execution.",
+  },
+];
+
 const DeckTemplate = () => (
   <FlexBox
     justifyContent="space-between"
@@ -440,7 +463,7 @@ export default function PitchDeckPage() {
                     fontFamily="var(--font-poppins, 'Poppins', sans-serif)"
                     color="white"
                   >
-                    Choose a craft. Ship real projects.
+                    Choose a track. Ship real projects.
                   </Heading>
                 </div>
 
@@ -471,6 +494,51 @@ export default function PitchDeckPage() {
                       <p className="text-sm text-slate-300">{track.desc}</p>
                     </div>
                   ))}
+                </div>
+              </SlideCard>
+            </Slide>
+            <Slide backgroundColor="transparent" padding={0}>
+              <SlideCard
+                gradient={[
+                  "absolute inset-0 bg-[radial-gradient(circle_at_20%_-10%,rgba(250,84,4,0.18),transparent_55%)]",
+                  "absolute inset-0 bg-[radial-gradient(circle_at_70%_-5%,rgba(4,183,236,0.25),transparent_45%)]",
+                ]}
+              >
+                <SectionEyebrow>Pricing</SectionEyebrow>
+                <div className="space-y-3">
+                  <Heading
+                    fontSize="clamp(2.2rem, 3.6vw, 3rem)"
+                    lineHeight={1.15}
+                    fontWeight={800}
+                    textAlign="left"
+                    fontFamily="var(--font-poppins, 'Poppins', sans-serif)"
+                    color="white"
+                  >
+                    2026 Philippines Pricing
+                  </Heading>
+                  <p className="text-base text-slate-200">
+                    Every track ships with AI copilots, mentor reviews, live sprints, and community
+                    support crafted for builders, designers, analysts, and operators across the
+                    Philippines.
+                  </p>
+                </div>
+
+                <div className="grid gap-4 text-slate-100 sm:grid-cols-2">
+                  {pricingTracks.map((track) => (
+                    <div
+                      key={track.track}
+                      className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"
+                    >
+                      <p className="text-base font-semibold text-white">{track.track}</p>
+                      <p className="text-sm text-slate-300">{track.price}</p>
+                      <p className="text-xs text-slate-400">{track.description}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-black/50 px-6 py-3 text-center text-sm text-slate-200">
+                  Flexible plans and scholarships are available for cohort-ready professionals —
+                  reach out to the admissions team for details.
                 </div>
               </SlideCard>
             </Slide>
