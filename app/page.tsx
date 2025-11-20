@@ -11,6 +11,7 @@ import ApplySection from "./components/ApplySection";
 import FAQSection from "./components/FAQSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import PricingTabsSection from "./components/PricingTabsSection";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
           <HeroSection />
           <BootcampProgramsSection />
           <BootcampStructure />
+          <PricingTabsSection />
           <CoreSystemSection />
           <JourneySection />
           <MasterySummarySection />
