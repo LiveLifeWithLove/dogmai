@@ -117,6 +117,50 @@ const TitleSlide = () => (
   </div>
 );
 
+const OpportunitySlide = () => (
+  <div className={`${slideShell} bg-gradient-to-br from-[#f8fbff] via-white to-[#e6edfc]`}>
+    <div className="pointer-events-none absolute inset-0">
+      <div className="absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top,rgba(141,191,235,0.3),transparent_70%)]" />
+      <div className="absolute inset-y-0 left-0 w-1/3 bg-[radial-gradient(circle_at_bottom,rgba(19,30,99,0.08),transparent_70%)]" />
+    </div>
+
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-10">
+      <div className="space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">The Opportunity</p>
+        <Heading
+          fontSize="clamp(2.8rem, 4vw, 3.6rem)"
+          lineHeight={1.15}
+          fontWeight={700}
+          textAlign="left"
+          fontFamily="var(--font-manrope, 'Manrope', sans-serif)"
+          color="#131e63"
+        >
+          The ICT landscape is changing fast.
+        </Heading>
+        <p className="text-lg font-medium text-[#131e63]/80">
+          Innovation is now the defining advantage in telecommunications.
+        </p>
+      </div>
+
+      <div className="grid gap-6 text-[#131e63] md:grid-cols-2">
+        <div className="border border-[#8dbfeb]/40 bg-[#f8fbff] px-6 py-6 text-base">
+          AI, deep tech, IoT, and cloud-native systems are reshaping connectivity.
+        </div>
+        <div className="border border-[#131e63]/10 bg-white px-6 py-6 text-base">
+          Philippine digital transformation is accelerating.
+        </div>
+        <div className="border border-[#131e63]/10 bg-white px-6 py-6 text-base md:col-span-2">
+          Leaders win by discovering, testing, and scaling new technologies faster.
+        </div>
+      </div>
+
+      <div className="border border-[#8dbfeb]/50 bg-[#8dbfeb]/15 px-6 py-6 text-center text-xl font-semibold text-[#131e63]">
+        Those who innovate first&mdash;lead.
+      </div>
+    </div>
+  </div>
+);
+
 export default function PitchDeckSBVOne() {
   return (
     <div className="min-h-screen bg-[#e6edfc] text-[#131e63]">
@@ -129,6 +173,9 @@ export default function PitchDeckSBVOne() {
           <Deck template={<DeckTemplate />} theme={deckTheme}>
             <Slide backgroundColor="transparent" padding={0}>
               <TitleSlide />
+            </Slide>
+            <Slide backgroundColor="transparent" padding={0}>
+              <OpportunitySlide />
             </Slide>
           </Deck>
         </div>
