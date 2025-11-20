@@ -172,7 +172,7 @@ const TitleSlide = () => (
         </p>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-4">
         <div className="flex flex-col gap-4 border border-[#131e63]/10 bg-[#f8fbff] px-6 py-8 ">
           <p className="text-sm uppercase tracking-[0.4em] text-[#8dbfeb]">Vision</p>
           <p className="text-base text-[#131e63]/80">
@@ -202,7 +202,7 @@ const OpportunitySlide = () => (
       <div className="absolute inset-y-0 left-0 w-1/3 bg-[radial-gradient(circle_at_bottom,rgba(19,30,99,0.08),transparent_70%)]" />
     </div>
 
-    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-10">
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
       <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">The Opportunity</p>
         <Heading
@@ -255,7 +255,7 @@ const UrgencySlide = () => (
       <div className="absolute inset-y-8 right-6 w-40 rounded-full bg-[#8dbfeb]/25 blur-3xl" />
     </div>
 
-    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-4">
       <div className="space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">
           Why Infinivan Must Act Now
@@ -338,7 +338,7 @@ const AdvantageSlide = () => (
       />
     </div>
 
-    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-10">
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
       <div className="space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">
           The Starting Block Advantage
@@ -494,7 +494,7 @@ const VisibilitySlide = () => (
         }}
       />
     </div>
-    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-8">
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
       <div className="space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">
           Strategic Visibility Into Emerging Tech
@@ -537,7 +537,7 @@ const BrandSlide = () => (
         }}
       />
     </div>
-    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-8">
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
       <div className="space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">
           Brand & Ecosystem Leadership
@@ -622,7 +622,7 @@ const ImperativeSlide = () => (
         }}
       />
     </div>
-    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-8">
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
       <div className="space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">
           The Strategic Imperative
@@ -686,7 +686,7 @@ const VisionSlide = () => (
       </div>
       <div className="relative mx-auto h-80 w-full max-w-2xl">
         <Image
-          src="/illustration.png"
+          src="/illustration.webp"
           alt="Innovation illustration"
           fill
           className="object-contain"
