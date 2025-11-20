@@ -17,8 +17,8 @@ export default function ContactSection() {
     },
     {
       label: "LinkedIn",
-      value: "linkedin.com/company/dogm-ai",
-      href: "https://linkedin.com/company/dogm-ai",
+      value: "linkedin.com/company/dogmai",
+      href: "https://linkedin.com/company/dogmai",
       accent: "text-cerulean",
     },
     {
