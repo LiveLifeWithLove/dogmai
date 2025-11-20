@@ -19,6 +19,15 @@ const deckTheme = {
 const slideShell =
   "relative flex min-h-screen flex-col overflow-hidden rounded-[36px] border border-[#131e63]/10 bg-white px-8 py-16 text-[#131e63] lg:px-12 lg:py-20 shadow-[0_30px_80px_rgba(19,30,99,0.12)]";
 
+const specialties = [
+  { icon: "⌘", label: "AI & deep tech" },
+  { icon: "≈", label: "IoT & AIoT" },
+  { icon: "⬡", label: "Cybersecurity" },
+  { icon: "⇡", label: "Connectivity & digital infrastructure" },
+  { icon: "☁", label: "Cloud-native systems" },
+  { icon: "✦", label: "Future-of-work & next-gen digital services" },
+];
+
 const DeckTemplate = () => (
   <FlexBox
     justifyContent="space-between"
@@ -164,7 +173,15 @@ const OpportunitySlide = () => (
 const UrgencySlide = () => (
   <div className={`${slideShell} bg-gradient-to-b from-white to-[#f3f7ff]`}>
     <div className="pointer-events-none absolute inset-0">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(141,191,235,0.25),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(141,191,235,0.3),transparent_70%)]" />
+      <div
+        className="absolute inset-0 opacity-60"
+        style={{
+          backgroundImage:
+            "linear-gradient(135deg, rgba(19,30,99,0.04) 25%, transparent 25%), linear-gradient(135deg, transparent 75%, rgba(19,30,99,0.05) 75%)",
+          backgroundSize: "28px 28px",
+        }}
+      />
     </div>
 
     <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
@@ -235,6 +252,63 @@ const UrgencySlide = () => (
   </div>
 );
 
+const AdvantageSlide = () => (
+  <div className={`${slideShell} bg-gradient-to-br from-white via-[#f5f8ff] to-[#e6edfc]`}>
+    <div className="pointer-events-none absolute inset-0">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(141,191,235,0.35),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(230,237,252,0.45),transparent_80%)]" />
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg, rgba(19,30,99,0.05) 1px, transparent 1px), linear-gradient(0deg, rgba(19,30,99,0.05) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+    </div>
+
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-10">
+      <div className="space-y-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">
+          The Starting Block Advantage
+        </p>
+        <Heading
+          fontSize="clamp(2.6rem, 3.6vw, 3.2rem)"
+          lineHeight={1.2}
+          fontWeight={700}
+          fontFamily="var(--font-manrope, 'Manrope', sans-serif)"
+          color="#131e63"
+          textAlign="left"
+        >
+          Philippines-rooted venture building for frontier innovation.
+        </Heading>
+        <p className="text-lg text-[#131e63]/80">
+          Starting Block Ventures is a Philippines-based startup accelerator and venture builder focused
+          on high-tech, early-stage innovation.
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        <p className="text-sm uppercase tracking-[0.35em] text-[#8dbfeb]">We specialize in</p>
+        <div className="grid gap-4 text-sm text-[#131e63] sm:grid-cols-2">
+          {specialties.map((item) => (
+            <div key={item.label} className="flex items-center gap-3 border border-[#131e63]/10 bg-white/85 px-5 py-4">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e6edfc] text-base font-semibold text-[#131e63]">
+                {item.icon}
+              </span>
+              <span>{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p className="border border-[#131e63]/10 bg-white/90 px-6 py-6 text-base text-[#131e63]/85">
+        We transform frontier startups into deployable, scalable technologies.
+      </p>
+    </div>
+  </div>
+);
+
 export default function PitchDeckSBVOne() {
   return (
     <div className="min-h-screen bg-[#e6edfc] text-[#131e63]">
@@ -253,6 +327,9 @@ export default function PitchDeckSBVOne() {
             </Slide>
             <Slide backgroundColor="transparent" padding={0}>
               <UrgencySlide />
+            </Slide>
+            <Slide backgroundColor="transparent" padding={0}>
+              <AdvantageSlide />
             </Slide>
           </Deck>
         </div>
