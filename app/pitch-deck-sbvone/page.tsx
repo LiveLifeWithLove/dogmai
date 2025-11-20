@@ -45,20 +45,16 @@ const SlideTop = () => (
   <div className="flex flex-wrap items-center justify-between gap-4">
     <Link
       href="/"
-      className="flex items-center gap-4 rounded-2xl border border-[#131e63]/15 bg-white px-4 py-2 text-[#131e63] shadow-sm transition hover:border-[#131e63]/40"
+      className="flex items-center gap-4 border border-[#131e63]/15 bg-white px-4 py-2 text-[#131e63]  transition hover:border-[#131e63]/40"
     >
-      <div className="relative h-12 w-40 overflow-hidden rounded-xl bg-[#e6edfc]">
+      <div className="relative h-12 w-40 overflow-hidden bg-[#e6edfc]">
         <Image
           src="/sbv_logo.png"
           alt="Starting Block Ventures logo"
           fill
-          className="object-contain"
+          className="object-contain py-1"
           sizes="160px"
         />
-      </div>
-      <div className="text-left text-xs uppercase tracking-[0.3em] text-[#131e63]/70">
-        <span className="block text-[11px] font-semibold">Starting Block Ventures</span>
-        <span className="block text-[10px] text-[#131e63]/50">Innovation Studio</span>
       </div>
     </Link>
     <p className="text-[11px] uppercase tracking-[0.35em] text-[#131e63]/50">Partnership Pitch</p>
@@ -79,7 +75,7 @@ const TitleSlide = () => (
       <div className="absolute inset-0 bg-gradient-to-b from-[#f6f9ff] via-[#e6edfc] to-white" />
     </div>
 
-    <div className="relative mx-auto flex w-full max-w-4xl flex-col gap-12 text-center">
+    <div className="relative mx-auto flex w-full max-w-4xl flex-col gap-8 text-center">
       <SlideTop />
 
       <div className="space-y-6">
@@ -99,7 +95,7 @@ const TitleSlide = () => (
       </div>
 
       <div className="space-y-6">
-        <div className="flex flex-col gap-4 rounded-[28px] border border-[#131e63]/10 bg-[#f8fbff] px-6 py-8 shadow-sm">
+        <div className="flex flex-col gap-4 border border-[#131e63]/10 bg-[#f8fbff] px-6 py-8 ">
           <p className="text-sm uppercase tracking-[0.4em] text-[#8dbfeb]">Vision</p>
           <p className="text-base text-[#131e63]/80">
             Aligning venture-backed innovation with national-scale connectivity to accelerate the
@@ -107,7 +103,7 @@ const TitleSlide = () => (
           </p>
         </div>
         <div
-          className="rounded-2xl border px-6 py-5 text-sm font-semibold"
+          className="border px-6 py-5 text-sm font-semibold"
           style={{
             borderColor: "rgba(141, 191, 235, 0.45)",
             backgroundColor: "rgba(141, 191, 235, 0.25)",
