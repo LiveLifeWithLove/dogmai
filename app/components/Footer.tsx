@@ -18,6 +18,7 @@ export default function Footer() {
           {[
             { label: "Core System", href: "/#system" },
             { label: "Bootcamps", href: "/#bootcamp" },
+            { label: "Pricing", href: "/#pricing" },
             { label: "Contact", href: "/#contact" },
           ].map((link) => (
             <a
