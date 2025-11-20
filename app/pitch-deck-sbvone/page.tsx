@@ -161,6 +161,80 @@ const OpportunitySlide = () => (
   </div>
 );
 
+const UrgencySlide = () => (
+  <div className={`${slideShell} bg-gradient-to-b from-white to-[#f3f7ff]`}>
+    <div className="pointer-events-none absolute inset-0">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(141,191,235,0.25),transparent_70%)]" />
+    </div>
+
+    <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
+      <div className="space-y-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#8dbfeb]">
+          Why Infinivan Must Act Now
+        </p>
+        <Heading
+          fontSize="clamp(2.6rem, 3.6vw, 3.2rem)"
+          lineHeight={1.2}
+          fontWeight={700}
+          fontFamily="var(--font-manrope, 'Manrope', sans-serif)"
+          color="#131e63"
+        >
+          The top telcos have already built innovation engines.
+        </Heading>
+      </div>
+
+      <div className="grid gap-6 text-[#131e63] md:grid-cols-2">
+        <div className="border border-[#131e63]/10 bg-white px-6 py-6 text-base">
+          <p className="text-sm uppercase tracking-[0.35em] text-[#8dbfeb]">PLDT / Smart</p>
+          <div className="mt-3 flex h-12 w-32 items-center justify-center rounded-lg bg-[#02282f] px-3">
+            <Image
+              src="/ideaspace.svg"
+              alt="Ideaspace logo"
+              width={110}
+              height={28}
+              className="object-contain"
+            />
+          </div>
+          <p className="mt-3 text-lg font-semibold">Ideaspace</p>
+        </div>
+        <div className="border border-[#131e63]/10 bg-white px-6 py-6 text-base">
+          <p className="text-sm uppercase tracking-[0.35em] text-[#8dbfeb]">Globe</p>
+          <div className="mt-3 flex flex-wrap items-center gap-4">
+            <div className="relative h-12 w-32 rounded-lg bg-[#cd2025] px-3 py-2">
+              <Image
+                src="/kvi-logo.webp"
+                alt="Kickstart Ventures logo"
+                fill
+                className="object-contain"
+                sizes="128px"
+              />
+            </div>
+            <div className="relative h-12 w-32">
+              <Image
+                src="/917ventures-logo.png"
+                alt="917Ventures logo"
+                fill
+                className="object-contain"
+                sizes="128px"
+              />
+            </div>
+          </div>
+          <p className="mt-3 text-lg font-semibold">Kickstart Ventures + 917Ventures</p>
+        </div>
+      </div>
+
+      <p className="border border-[#131e63]/10 bg-white px-6 py-6 text-base text-[#131e63]/80">
+        These accelerate their access to emerging technologies, M&amp;A, and new revenue pipelines.
+      </p>
+
+      <div className="border border-[#131e63]/10 bg-[#f8fbff] px-6 py-6 text-base text-[#131e63]">
+        Infinivan is at a strategic inflection point. Building an innovation ecosystem now is essential
+        to stay competitive.
+      </div>
+    </div>
+  </div>
+);
+
 export default function PitchDeckSBVOne() {
   return (
     <div className="min-h-screen bg-[#e6edfc] text-[#131e63]">
@@ -176,6 +250,9 @@ export default function PitchDeckSBVOne() {
             </Slide>
             <Slide backgroundColor="transparent" padding={0}>
               <OpportunitySlide />
+            </Slide>
+            <Slide backgroundColor="transparent" padding={0}>
+              <UrgencySlide />
             </Slide>
           </Deck>
         </div>
