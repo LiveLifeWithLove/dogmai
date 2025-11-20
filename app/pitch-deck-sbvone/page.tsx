@@ -173,15 +173,17 @@ const OpportunitySlide = () => (
 const UrgencySlide = () => (
   <div className={`${slideShell} bg-gradient-to-b from-white to-[#f3f7ff]`}>
     <div className="pointer-events-none absolute inset-0">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(141,191,235,0.3),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(141,191,235,0.35),transparent_65%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(230,237,252,0.45),transparent_70%)]" />
       <div
-        className="absolute inset-0 opacity-60"
+        className="absolute inset-0 opacity-35"
         style={{
           backgroundImage:
-            "linear-gradient(135deg, rgba(19,30,99,0.04) 25%, transparent 25%), linear-gradient(135deg, transparent 75%, rgba(19,30,99,0.05) 75%)",
-          backgroundSize: "28px 28px",
+            "linear-gradient(100deg, rgba(19,30,99,0.06) 20%, transparent 20%), linear-gradient(100deg, transparent 80%, rgba(19,30,99,0.04) 80%)",
+          backgroundSize: "160px 160px",
         }}
       />
+      <div className="absolute inset-y-8 right-6 w-40 rounded-full bg-[#8dbfeb]/25 blur-3xl" />
     </div>
 
     <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-6">
@@ -290,7 +292,7 @@ const AdvantageSlide = () => (
 
       <div className="space-y-4">
         <p className="text-sm uppercase tracking-[0.35em] text-[#8dbfeb]">We specialize in</p>
-        <div className="grid gap-4 text-sm text-[#131e63] sm:grid-cols-2">
+        <div className="grid gap-4 text-sm text-[#131e63] sm:grid-cols-3">
           {specialties.map((item) => (
             <div key={item.label} className="flex items-center gap-3 border border-[#131e63]/10 bg-white/85 px-5 py-4">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#e6edfc] text-base font-semibold text-[#131e63]">
