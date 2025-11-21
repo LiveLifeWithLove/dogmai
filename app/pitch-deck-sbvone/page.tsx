@@ -739,7 +739,7 @@ const NextStepsSlide = () => (
           </li>
         ))}
       </ul>
-      <div className="flex flex-col items-center gap-4 border border-[#131e63]/10 bg-[#f8fbff]/90 px-6 py-8 text-center text-base text-[#131e63]/85">
+      <div className="flex flex-col items-center gap-2 border border-[#131e63]/10 bg-[#f8fbff]/90 px-6 py-8 text-center text-base text-[#131e63]/85">
         <div className="relative h-16 w-56">
           <Image
             src="/sbv_logo.png"
@@ -752,6 +752,14 @@ const NextStepsSlide = () => (
         <p className="text-sm text-[#131e63]/70">Startup Accelerator &amp; Venture Builder | Philippines
         </p>
         <p className="text-xl mt-2">Let’s build the future of Philippine innovation—together.</p>
+        <Link
+          href="https://sbv.one"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="mt-3 inline-flex items-center justify-center rounded-full bg-[#131e63] px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white transition hover:bg-[#101955]"
+        >
+          Visit sbv.one
+        </Link>
       </div>
     </div>
   </div>
